@@ -1,0 +1,47 @@
+name: BTC Tests
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+
+permissions:
+  contents: write
+  actions: read
+  checks: write
+
+jobs:
+  btc-tests:
+    name: Test execution
+    runs-on: self-hosted
+    if: ${{
+        contains(github.event.head_commit.message, '#ci') ||
+        github.event_name == 'workflow_dispatch'  ||
+        github.event_name == 'pull_request'
+        }}
+
+    steps:
+    - name: Checkout files
+      uses: actions/checkout@v4
+
+    - name: Run tests
+      shell: powershell
+      run: |
+        python scripts/run_tests.py
+
+    - name: Publish test results to GitHub Pages
+      # only publish report on gh pages for main branch
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: reports
+            
+    - name: Publish results
+      uses: dorny/test-reporter@v1
+      if: success() || failure()
+      with:
+        name: Test results
+        path: test_results.xml
+        reporter: jest-junit
+        only-summary: 'false'

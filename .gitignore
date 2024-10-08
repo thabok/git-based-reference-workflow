@@ -1,0 +1,17 @@
+
+# Simulink
+**/slprj/
+*.slxc
+*.slx.autosave
+*.mex64
+*_rtw/
+
+# BTC
+ep_sim/
+*.bak
+*_ep_stubs/
+*_btcdata/.cache/
+
+# Python
+__pycache__/
+*.pyc
