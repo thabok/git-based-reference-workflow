@@ -1,0 +1,99 @@
+{
+  "metaData":{
+    "kind":"Polarion",
+    "name":"avgspeed",
+    "externalUUID":"UUID http://polarion03.prom.local/polarion/redirect/project/avgspeed",
+    "lastImportDate":"8 Oct 2024, 13:40",
+    "additionalAttributes":[ ]
+  },
+  "requirements":[ {
+    "scopePath":"",
+    "data":[ {
+      "identifier":"AVG-77",
+      "name":"Deviating Wheel Speeds",
+      "description":"",
+      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-77",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-77&revision=298759",
+      "parent":"",
+      "lastUpdated":"8 Oct 2024, 13:40",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"AVG-81",
+      "name":"Wheel Speed Above Average",
+      "description":"The component shall indicate how much faster than the average speed the fastest wheel is (as positive percentage)",
+      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-81",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-81&revision=298759",
+      "parent":"AVG-77",
+      "lastUpdated":"8 Oct 2024, 13:40",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"AVG-80",
+      "name":"Wheel Speed Below Average",
+      "description":"The component shall indicate how much slower than the average speed the slowest wheel is (as negative percentage)",
+      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-80",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-80&revision=298759",
+      "parent":"AVG-77",
+      "lastUpdated":"8 Oct 2024, 13:40",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"AVG-76",
+      "name":"Core Functionality",
+      "description":"",
+      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-76",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-76&revision=298759",
+      "parent":"",
+      "lastUpdated":"8 Oct 2024, 13:40",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"AVG-79",
+      "name":"Overspeed Warning",
+      "description":"The component shall issue an overspeed warning if the speed is above 180km/h",
+      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-79",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-79&revision=298759",
+      "parent":"AVG-76",
+      "lastUpdated":"8 Oct 2024, 13:40",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"AVG-78",
+      "name":"Average Speed",
+      "description":"The component shall calculate the average speed of the four wheels",
+      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-78",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-78&revision=298759",
+      "parent":"AVG-76",
+      "lastUpdated":"8 Oct 2024, 13:40",
+      "additionalAttributes":[ ]
+    } ]
+  } ],
+  "settings":[ {
+    "key":"Host",
+    "value":"http://polarion03.prom.local"
+  }, {
+    "key":"Port",
+    "value":"80"
+  } ],
+  "importOptions":[ {
+    "key":"name_attr_value",
+    "value":"Title"
+  }, {
+    "key":"desc_attr_value",
+    "value":"Description"
+  }, {
+    "key":"Host",
+    "value":"http://polarion03.prom.local"
+  }, {
+    "key":"Port",
+    "value":"80"
+  }, {
+    "key":"Project URL",
+    "value":"http://polarion03.prom.local/polarion/redirect/project/avgspeed"
+  }, {
+    "key":"Work Item Types",
+    "value":"Requirement"
+  }, {
+    "key":"Baseline Name",
+    "value":"september-release"
+  }, {
+    "key":"Baseline Revision",
+    "value":"298759"
+  } ]
+}

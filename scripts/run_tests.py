@@ -5,13 +5,13 @@ from datetime import datetime
 from btc_embedded import EPRestApi, util
 
 work_dir = os.path.abspath(os.path.dirname(os.path.dirname(sys.argv[0])))
-epp_file = os.path.join(work_dir, 'model', 'test_project.epp')
+epp_file = os.path.join(work_dir, 'model', 'avg_speed.epx')
 project_name = os.path.basename(epp_file)[:-4]
 report_dir = os.path.abspath('reports')
 
 # BTC EmbeddedPlatform API object
-ep = EPRestApi(version='24.3p0')
-# Load a BTC EmbeddedPlatform profile (*.epp) and update it
+ep = EPRestApi()
+# Load a BTC EmbeddedPlatform profile (*.epx)
 ep.get(f"profiles/{epp_file}", message="Loading test project")
 ep.put('architectures', message="Parsing code and updating test project")
 
@@ -37,9 +37,6 @@ util.dump_testresults_junitxml(
     project_name=project_name,
     output_file=os.path.join(work_dir, 'test_results.xml')
 )
-
-# rbt_coverage = rbt_coverage = ep.get(f"scopes/{toplevel_scope_uid}/coverage-results-rbt")
-# util.print_rbt_results(response, rbt_coverage)
 
 # Create project report
 report = ep.post(f"scopes/{toplevel_scope_uid}/project-report", message="Creating test report")

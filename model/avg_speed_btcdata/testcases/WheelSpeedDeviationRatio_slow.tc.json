@@ -1,0 +1,95 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"WheelSpeedDeviationRatio_slow",
+    "scopePath":"",
+    "architecture":"avg_speed",
+    "description":"Checking different combinations of wheels with deviating speeds",
+    "length":"4",
+    "draft":"false"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "comment":"no deviation",
+        "inputs":[ {
+          "fWheelSpeedFL":"0"
+        }, {
+          "fWheelSpeedFR":"0"
+        }, {
+          "fWheelSpeedRL":"0"
+        }, {
+          "fWheelSpeedRR":"0"
+        } ],
+        "outputs":[ {
+          "fPercentBelow":"0"
+        }, {
+          "fAvgSpeed":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "comment":"60% below",
+        "inputs":[ {
+          "fWheelSpeedFL":"10"
+        }, {
+          "fWheelSpeedFR":"30"
+        }, {
+          "fWheelSpeedRL":"30"
+        }, {
+          "fWheelSpeedRR":"30"
+        } ],
+        "outputs":[ {
+          "fPercentBelow":"-60"
+        }, {
+          "fAvgSpeed":"25"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "comment":"25% below",
+        "inputs":[ {
+          "fWheelSpeedFL":"15"
+        }, {
+          "fWheelSpeedFR":"25"
+        }, {
+          "fWheelSpeedRL":"25"
+        }, {
+          "fWheelSpeedRR":"15"
+        } ],
+        "outputs":[ {
+          "fPercentBelow":"-25"
+        }, {
+          "fAvgSpeed":"20"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"3",
+        "comment":"100% below",
+        "inputs":[ {
+          "fWheelSpeedFL":"0"
+        }, {
+          "fWheelSpeedFR":"0"
+        }, {
+          "fWheelSpeedRL":"0"
+        }, {
+          "fWheelSpeedRR":"10"
+        } ],
+        "outputs":[ {
+          "fPercentBelow":"-100"
+        }, {
+          "fAvgSpeed":"2.5"
+        } ]
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-80" ],
+  "interface":{
+    "inputs":[ "fWheelSpeedFL", "fWheelSpeedFR", "fWheelSpeedRL", "fWheelSpeedRR" ],
+    "outputs":[ "fPercentBelow", "fPercentAbove", "bExtremeDeviation", "fAvgSpeed", "bOverspeedWarning" ]
+  }
+}

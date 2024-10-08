@@ -1,0 +1,40 @@
+{
+  "Profile" : {
+    "Version" : "24.3p0",
+    "Creator" : "developer",
+    "Creation Date" : "8 Oct 2024, 12:03",
+    "Modifier" : "developer",
+    "Modification Date" : "8 Oct 2024, 13:51",
+    "OS" : "Windows",
+    "Path" : "file:/E:/work/webinar-git-based-workflow/model/avg_speed.epx"
+  },
+  "Architectures" : {
+    "Simulink" : {
+      "Creator" : "developer",
+      "Import Date" : "08/10/2024 13:35",
+      "Matlab Version" : "Matlab 23.2 (R2023b)",
+      "Simulink Version" : "Simulink 23.2 (R2023b)",
+      "Model Creation Date" : "07/10/2024 11:16",
+      "Model Version" : "1.31",
+      "Model File" : "file:/E:/work/webinar-git-based-workflow/model/avg_speed.slx",
+      "Init Script" : "",
+      "Additional Model Information" : "file:/C:/Users/developer/AppData/Local/Temp/btc_temp_root/308-7090-62/AddModelInfo.xml",
+      "Architecture" : "Simulink Top Level",
+      "Parameters" : "ON",
+      "Visibility" : "GREY_BOX",
+      "isTL" : "false"
+    }
+  },
+  "Requirements Sources" : {
+    "avgspeed" : {
+      "Baseline Name" : "september-release",
+      "Project URL" : "http://polarion03.prom.local/polarion/redirect/project/avgspeed",
+      "Baseline Revision" : "298759"
+    }
+  },
+  "constants" : {
+    "-Infinity" : "-Infinity",
+    "Infinity" : "Infinity",
+    "NaN" : "NaN"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "Preferences" : [ {
+    "name" : "ep.coverage.model.coverageFiltersEnablement",
+    "value" : "false",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.coverage.model.coverageFiltersLocation",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.useTldsStubbing",
+    "value" : "false",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.reuseModelCallbacks",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.pilTimeoutConfiguration",
+    "value" : "60",
+    "type" : "integer"
+  }, {
+    "name" : "ep.coverage.ccode.bl.prefs.autoUpdate",
+    "value" : "true",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.da.tolerance.double",
+    "value" : "0",
+    "type" : "string"
+  }, {
+    "name" : "ep.da.tolerance.float",
+    "value" : "0",
+    "type" : "string"
+  }, {
+    "name" : "Inactive Execution Configs",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.pilExecutionConfigurationEnabled",
+    "value" : "false",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.da.tolerance.fxp",
+    "value" : "0",
+    "type" : "string"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.milRndMeth",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "name" : "ep.requirement.doors.root.location",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "name" : "ep.da.tolerance.fxp.resolution",
+    "value" : "false",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.pilExecutionConfiguration",
+    "value" : "",
+    "type" : "string"
+  }, {
+    "name" : "Domain Checks Auto Update",
+    "value" : "true",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.pilExecutionCleanCode",
+    "value" : "false",
+    "type" : "boolean"
+  }, {
+    "name" : "User Defined Test Auto Update",
+    "value" : "true",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.simulation.bl.prefs.removeExecutionRecordsWithError",
+    "value" : "true",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.base.ui.usecase.id",
+    "value" : "ep.req.based.test.ui.part.rbt",
+    "type" : "string"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.sl_simulation_mode",
+    "value" : "normal",
+    "type" : "string"
+  }, {
+    "name" : "ep.simulation.bl.prefs.derivedVectorContainerDeactivatedKey",
+    "value" : "false",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.base.ui.usecase.groups.id",
+    "value" : "ep.req.based.test.ui.part.rbt@=@group.requirements@;@ep.analysis.b2b.ui.part.BackToBack@=@group.subsystem@;@ep.formalverification.ui.navigator@=@group.subsystem@;@ep.specification.ui.navigator@=@group.subsystem",
+    "type" : "string"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.slSilExecutionConfigurationEnabled",
+    "value" : "false",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.simulation.ml.bl.prefs.tlSilExecutionConfigurationEnabled",
+    "value" : "false",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.architecture.codebase.bl.services.expexcompiler.preference.EpexCompilerIsBroken",
+    "value" : "false",
+    "type" : "boolean"
+  }, {
+    "name" : "ep.architecture.codebase.bl.services.expexcompiler.preference.EpexCompilerAlreadySetPreferenceKey",
+    "value" : "true",
+    "type" : "boolean"
+  } ]
+}

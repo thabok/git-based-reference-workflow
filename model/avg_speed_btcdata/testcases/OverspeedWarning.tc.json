@@ -1,0 +1,52 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"OverspeedWarning",
+    "scopePath":"",
+    "architecture":"avg_speed",
+    "description":"slowly increases speed until it exceeds the limit of 180",
+    "length":"200",
+    "draft":"false"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "inputs":[ {
+          "fWheelSpeedFL":"sg(Ramp, 200, Simulink, true, true, m=1, Starting value=0, End value=)"
+        }, {
+          "fWheelSpeedFR":"sg(Ramp, 200, Simulink, true, true, m=1, Starting value=0, End value=)"
+        }, {
+          "fWheelSpeedRL":"sg(Ramp, 200, Simulink, true, true, m=1, Starting value=0, End value=)"
+        }, {
+          "fWheelSpeedRR":"sg(Ramp, 200, Simulink, true, true, m=1, Starting value=0, End value=)"
+        } ],
+        "outputs":[ {
+          "bOverspeedWarning":"af(0, 181)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"180",
+        "comment":"not yet over the limit"
+      }
+    }, {
+      "step":{
+        "number":"181",
+        "comment":"over the limit: expect warning",
+        "outputs":[ {
+          "bOverspeedWarning":"af(1, 19)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"199"
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-79" ],
+  "interface":{
+    "inputs":[ "fWheelSpeedFL", "fWheelSpeedFR", "fWheelSpeedRL", "fWheelSpeedRR" ],
+    "outputs":[ "fPercentBelow", "fPercentAbove", "bExtremeDeviation", "bOverspeedWarning" ]
+  }
+}

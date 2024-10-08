@@ -7,10 +7,10 @@
 *_rtw/
 
 # BTC
-ep_sim/
+**/ep_sim/
 *.bak
-*_ep_stubs/
-*_btcdata/.cache/
+**/*_ep_stubs/
+**/*_btcdata/.cache/
 
 # Python
 __pycache__/
