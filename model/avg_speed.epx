@@ -2,27 +2,27 @@
   "Profile" : {
     "Version" : "24.3p0",
     "Creator" : "developer",
-    "Creation Date" : "8 Oct 2024, 12:03",
+    "Creation Date" : "9 Oct 2024, 15:52",
     "Modifier" : "developer",
-    "Modification Date" : "8 Oct 2024, 13:51",
+    "Modification Date" : "9 Oct 2024, 15:55",
+    "Creation Tool Version" : "24.3p0",
     "OS" : "Windows",
-    "Path" : "file:/E:/work/webinar-git-based-workflow/model/avg_speed.epx"
+    "Path" : "file:/E:/work/git-based-reference-workflow/model/avg_speed.epx"
   },
   "Architectures" : {
     "Simulink" : {
       "Creator" : "developer",
-      "Import Date" : "08/10/2024 13:35",
+      "Import Date" : "09/10/2024 15:52",
       "Matlab Version" : "Matlab 23.2 (R2023b)",
       "Simulink Version" : "Simulink 23.2 (R2023b)",
       "Model Creation Date" : "07/10/2024 11:16",
-      "Model Version" : "1.31",
-      "Model File" : "file:/E:/work/webinar-git-based-workflow/model/avg_speed.slx",
+      "Model Version" : "2.2",
+      "Model File" : "file:/E:/work/git-based-reference-workflow/model/avg_speed.slx",
       "Init Script" : "",
-      "Additional Model Information" : "file:/C:/Users/developer/AppData/Local/Temp/btc_temp_root/308-7090-62/AddModelInfo.xml",
+      "Additional Model Information" : "file:/C:/Users/developer/AppData/Local/Temp/btc_temp_root/3294-5158-c/AddModelInfo.xml",
       "Architecture" : "Simulink Top Level",
       "Parameters" : "ON",
-      "Visibility" : "GREY_BOX",
-      "isTL" : "false"
+      "Visibility" : "BLACK_BOX"
     }
   },
   "Requirements Sources" : {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sl:SimulinkArchitecture xmlns:sl="http://btc-es.de/ep/simulink/2014/12/09" infoXML="C:\Users\developer\AppData\Local\Temp\btc_temp_root\308-7090-62\AddModelInfo.xml" modelVersion="1.31" modelPath="E:\work\webinar-git-based-workflow\model\avg_speed.slx" modelCreationDate="2024-10-07T11:16:42" creator="developer">
+<sl:SimulinkArchitecture xmlns:sl="http://btc-es.de/ep/simulink/2014/12/09" infoXML="C:\Users\developer\AppData\Local\Temp\btc_temp_root\3294-5158-c\AddModelInfo.xml" modelVersion="2.2" modelPath="E:\work\git-based-reference-workflow\model\avg_speed.slx" modelCreationDate="2024-10-07T11:16:42" creator="developer">
 	<toolInfo name="Matlab" release="(R2023b)" version="23.2" patchLevel="" />
 	<toolInfo name="Simulink" release="(R2023b)" version="23.2" patchLevel="" />
-	<model modelID="model001" modelKind="model" modelVersion="1.31" modelPath="E:\work\webinar-git-based-workflow\model\avg_speed.slx" creationDate="2024-10-07T11:16:42" modificationDate="2024-10-08T12:00:23">
+	<model modelID="model001" modelKind="model" modelVersion="2.2" modelPath="E:\work\git-based-reference-workflow\model\avg_speed.slx" creationDate="2024-10-07T11:16:42" modificationDate="2024-10-09T15:47:27">
 		<subsystem subsysID="ss1" physicalPath="avg_speed" path="" sampleTime="0.01" name="avg_speed" scopeKind="SUT" kind="subsystem">
 			<inport portNumber="1" name="fWheelSpeedFL" physicalPath="avg_speed/fWheelSpeedFL" path="fWheelSpeedFL">
 				<double />
@@ -23,7 +23,7 @@
 				<double />
 			</outport>
 			<outport portNumber="3" name="bExtremeDeviation" physicalPath="avg_speed/bExtremeDeviation" path="bExtremeDeviation">
-				<double />
+				<boolean />
 			</outport>
 			<outport portNumber="4" name="fAvgSpeed" physicalPath="avg_speed/fAvgSpeed" path="fAvgSpeed">
 				<double />

@@ -13,7 +13,7 @@ report_dir = os.path.abspath('reports')
 ep = EPRestApi()
 # Load a BTC EmbeddedPlatform profile (*.epx)
 ep.get(f"profiles/{epp_file}", message="Loading test project")
-ep.put('architectures', message="Parsing code and updating test project")
+ep.put('architectures?performUpdateCheck=true', message="Parsing model and updating test project")
 
 # Execute requirements-based tests
 scopes = ep.get('scopes')
@@ -22,7 +22,7 @@ toplevel_scope_uid = scope_uids[0]
 rbt_exec_payload = {
     'UIDs': scope_uids,
     'data' : {
-        'execConfigNames' : [ 'SIL' ] # SL MIL / TL MIL / SIL
+        'execConfigNames' : [ 'SL MIL (Toplevel)' ] # SL MIL / TL MIL / SIL
     }
 }
 exec_start_time = datetime.now()
