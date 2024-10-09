@@ -1,0 +1,17 @@
+{
+  "version":"1.0",
+  "configuration":{
+    "signals":{
+      "outputs":[ {
+        "name":"bExtremeDeviation",
+        "visible":false
+      }, {
+        "name":"bOverspeedWarning",
+        "visible":false
+      }, {
+        "name":"fPercentAbove",
+        "visible":false
+      } ]
+    }
+  }
+}
