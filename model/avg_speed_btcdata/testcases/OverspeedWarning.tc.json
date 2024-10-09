@@ -6,7 +6,8 @@
     "architecture":"avg_speed",
     "description":"slowly increases speed until it exceeds the limit of 180",
     "length":"200",
-    "draft":"false"
+    "draft":"false",
+    "externalURL":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-84"
   },
   "vectorContent":{
     "steps":[ {
@@ -40,7 +41,8 @@
       }
     }, {
       "step":{
-        "number":"199"
+        "number":"199",
+        "comment":"asdf"
       }
     } ]
   },

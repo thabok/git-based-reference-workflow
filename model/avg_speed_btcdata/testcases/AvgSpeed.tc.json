@@ -6,7 +6,8 @@
     "architecture":"avg_speed",
     "description":"Checks if the average speed is calculated correctly (incl. negative speed & zero)",
     "length":"501",
-    "draft":"false"
+    "draft":"false",
+    "externalURL":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-85"
   },
   "vectorContent":{
     "steps":[ {

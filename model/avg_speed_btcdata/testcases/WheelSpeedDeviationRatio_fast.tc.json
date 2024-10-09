@@ -6,7 +6,8 @@
     "architecture":"avg_speed",
     "description":"Checking different combinations of wheels with deviating speeds",
     "length":"4",
-    "draft":"false"
+    "draft":"false",
+    "externalURL":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-86"
   },
   "vectorContent":{
     "steps":[ {

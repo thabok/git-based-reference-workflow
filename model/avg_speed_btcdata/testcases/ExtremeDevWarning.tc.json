@@ -1,0 +1,51 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"ExtremeDevWarning",
+    "scopePath":"",
+    "architecture":"avg_speed",
+    "description":"Checks if the warning is correctly issued for extreme deviations when faster than 30km/h",
+    "length":"2",
+    "draft":"false"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "comment":"all good",
+        "inputs":[ {
+          "fWheelSpeedFL":"58"
+        }, {
+          "fWheelSpeedFR":"50"
+        }, {
+          "fWheelSpeedRL":"50"
+        }, {
+          "fWheelSpeedRR":"50"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        }, {
+          "fAvgSpeed":"52"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "comment":"extreme deviation!",
+        "inputs":[ {
+          "fWheelSpeedFL":"90"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        }, {
+          "fAvgSpeed":"60"
+        } ]
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-83" ],
+  "interface":{
+    "inputs":[ "fWheelSpeedFL", "fWheelSpeedFR", "fWheelSpeedRL", "fWheelSpeedRR" ],
+    "outputs":[ "bExtremeDeviation", "fAvgSpeed", "bOverspeedWarning" ]
+  }
+}

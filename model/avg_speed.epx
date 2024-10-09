@@ -4,7 +4,7 @@
     "Creator" : "developer",
     "Creation Date" : "9 Oct 2024, 15:52",
     "Modifier" : "developer",
-    "Modification Date" : "9 Oct 2024, 15:55",
+    "Modification Date" : "9 Oct 2024, 16:05",
     "Creation Tool Version" : "24.3p0",
     "OS" : "Windows",
     "Path" : "file:/E:/work/git-based-reference-workflow/model/avg_speed.epx"
@@ -27,9 +27,14 @@
   },
   "Requirements Sources" : {
     "avgspeed" : {
-      "Baseline Name" : "september-release",
+      "Baseline Name" : "october-release",
       "Project URL" : "http://polarion03.prom.local/polarion/redirect/project/avgspeed",
-      "Baseline Revision" : "298759"
+      "Baseline Revision" : "298761"
+    }
+  },
+  "Test Cases Specifications" : {
+    "avgspeed" : {
+      "Project URL" : "http://polarion03.prom.local/polarion/redirect/project/avgspeed"
     }
   },
   "constants" : {
