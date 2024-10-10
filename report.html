@@ -1,0 +1,1830 @@
+<style>/* Basics */
+
+html * {
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #F6F6FB;
+  margin-top: 100px;
+  margin-left:40px;
+  margin-right:40px;
+  min-width: 1024px;
+  color: #63718E;
+}
+h1, h2, h3, h4, h5 {
+  color: #1F4C73;
+}
+
+hr {
+  color:#FFFFFF;
+}
+
+.link{
+  cursor: pointer; 
+
+  text-decoration: underline;
+}
+
+.metainfo {
+    font-size: .750em;
+    list-style-type: none;
+    position: absolute; 
+    width:200px; 
+    right: 1%; 
+    top: 50%;
+}
+
+.metainfo span {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.metainfo li {
+      padding: 1px 0px 1px 0px;
+}
+
+/* Navigation */
+
+.top_header {
+  background-color: #F6F6FB;
+  height: 110px;
+  min-width: 1024px;
+  top: 0px;
+  left: 40px;
+  right: 40px;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-bottom: 3px solid #FFFFFF;
+  z-index: 100;
+}
+
+.top_spacer {
+  background-color: #F6F6FB;
+  height: 110px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+  left: 0px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-top: 10px;
+}
+
+.logo {
+  min-width: 200px;
+  max-height: 104px;
+  margin-left: 16px;
+  margin-top: 10px;
+  background-color: #F6F6FB;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E%3Csvg height='100%25' stroke-miterlimit='10' style='fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;' version='1.1' viewBox='0 0 1200 320' width='100%25' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cg%3E%3Cpath d='M341.857 65.8384L333.73 108.564L287.503 108.564L263.983 232.544L212.618 232.544L236.139 108.564L189.906 108.564L198.035 65.8384L341.857 65.8384ZM499.28 127.942C499.217 77.9778 466.346 61.8698 429.224 61.8698C372.485 61.8698 338.083 106.694 337.138 160.63C336.363 205.225 359.163 236.513 407.495 236.513C476.836 236.513 490.789 186.313 494.122 169.271L443.691 169.271C440.165 183.977 430.864 194.953 414.756 194.953C391.178 194.953 388.283 173.473 388.523 159.698C388.935 136.115 399.779 103.428 428.261 103.428C444.138 103.428 451.456 112.299 450.716 127.942L499.28 127.942ZM144.121 142.654L144.121 143.121C157.989 146.389 166.812 161.099 166.812 176.509C166.812 216.666 137.818 232.544 105.037 232.544L18.8835 232.544L49.9824 65.8384L127.101 65.8384C159.671 65.8384 171.86 78.4468 171.86 102.494C171.86 123.509 162.402 137.283 144.333 142.654L144.121 142.654ZM120.584 176.042C120.584 163.666 112.392 161.797 102.727 161.797L77.3003 161.797L71.4161 192.85L101.047 192.85C109.239 192.85 120.584 189.583 120.584 176.042ZM125.631 117.437C125.631 107.397 119.535 105.529 111.34 105.529L87.596 105.529L82.9751 130.744L109.03 130.744C116.382 130.744 125.631 127.711 125.631 117.437L125.631 117.437ZM590.827 302.717L598.535 302.717L598.535 18.172L590.827 18.172L590.827 302.717ZM690.639 187.184C694.175 187.184 698.321 188.552 700.95 189.921L703.779 182.128C699.534 180.338 694.884 179.18 690.335 179.18C681.842 179.18 670.924 183.603 670.924 194.976C670.924 208.561 688.516 209.929 688.516 219.091C688.516 225.199 682.854 227.41 677.698 227.41C673.553 227.41 669.611 225.936 665.869 224.356L664.049 232.887C667.892 234.255 670.924 235.414 679.112 235.414C687.2 235.414 698.624 231.202 698.624 218.249C698.624 203.296 681.034 202.874 681.034 193.712C681.034 188.342 686.493 187.184 690.639 187.184L690.639 187.184ZM893.429 199.715C893.429 203.296 893.026 206.349 892.522 209.508L856.228 209.508C856.025 210.667 855.925 211.72 855.925 212.878C855.925 224.146 862.597 227.41 871.797 227.41C876.549 227.41 881.702 226.147 886.354 224.146L884.838 233.202C879.885 234.466 874.729 235.414 869.572 235.414C857.038 235.414 845.815 230.148 845.815 211.193C845.815 196.345 855.822 179.18 874.02 179.18C886.456 179.18 893.429 186.972 893.429 199.715L893.429 199.715ZM883.928 198.03C883.928 191.712 880.188 187.184 873.01 187.184C865.226 187.184 859.261 194.239 857.238 202.136L883.625 202.136C883.828 200.557 883.928 199.294 883.928 198.03L883.928 198.03ZM831.461 164.331L821.25 168.017L818.724 180.444L807.197 180.444L805.781 188.447L817.105 188.447L812.658 210.877C812.05 213.826 810.836 220.039 810.836 223.514C810.836 229.201 814.175 235.414 823.17 235.414C825.902 235.414 830.348 235.098 832.471 234.255L833.887 226.041C832.067 226.884 829.235 227.41 827.215 227.41C822.363 227.41 820.34 225.41 820.34 221.619C820.34 219.724 821.35 213.932 821.857 211.51L826.608 188.447L840.862 188.447L842.378 180.444L828.225 180.444L831.461 164.331ZM969.556 179.18C961.669 179.18 956.312 182.444 951.257 188.552C949.538 182.128 943.675 179.18 937.608 179.18C930.836 179.18 924.871 182.128 921.232 187.815L921.029 187.815L922.242 180.444L913.347 180.444C912.941 182.761 912.74 184.656 912.334 186.551L902.833 234.151L912.334 234.151L918.096 207.191C919.816 198.872 925.174 187.184 934.778 187.184C939.631 187.184 942.36 190.658 942.36 195.081C942.36 196.24 942.157 198.03 941.753 200.136L934.879 234.151L944.382 234.151L950.144 207.191C951.864 198.872 957.222 187.184 966.824 187.184C971.678 187.184 974.408 190.658 974.408 195.081C974.408 196.24 974.205 198.03 973.801 200.136L966.927 234.151L976.428 234.151L982.393 204.454C983.203 200.663 983.909 196.45 983.909 193.186C983.909 184.972 977.947 179.18 969.556 179.18L969.556 179.18ZM997.659 194.976C997.659 208.561 1015.25 209.929 1015.25 219.091C1015.25 225.199 1009.59 227.41 1004.43 227.41C1000.29 227.41 996.343 225.936 992.604 224.356L990.784 232.887C994.626 234.255 997.659 235.414 1005.85 235.414C1013.93 235.414 1025.36 231.202 1025.36 218.249C1025.36 203.296 1007.77 202.874 1007.77 193.712C1007.77 188.342 1013.23 187.184 1017.37 187.184C1020.91 187.184 1025.06 188.552 1027.68 189.921L1030.51 182.128C1026.27 180.338 1021.62 179.18 1017.07 179.18C1008.58 179.18 997.659 183.603 997.659 194.976ZM751.597 180.444L729.153 223.304L728.953 223.304L722.988 180.444L713.08 180.444L721.371 237.098C717.426 245.418 713.484 249.419 707.722 249.525C706.003 249.525 704.285 248.998 703.576 248.578L701.96 256.791C704.386 257.317 706.812 257.529 709.138 257.529C718.639 257.529 722.078 252.473 726.627 244.26L761.808 180.444L751.597 180.444ZM764.84 194.976C764.84 208.561 782.43 209.929 782.43 219.091C782.43 225.199 776.768 227.41 771.615 227.41C767.469 227.41 763.525 225.936 759.785 224.356L757.966 232.887C761.808 234.255 764.84 235.414 773.029 235.414C781.116 235.414 792.54 231.202 792.54 218.249C792.54 203.296 774.949 202.874 774.949 193.712C774.949 188.342 780.41 187.184 784.553 187.184C788.092 187.184 792.237 188.552 794.866 189.921L797.696 182.128C793.45 180.338 788.798 179.18 784.249 179.18C775.758 179.18 764.84 183.603 764.84 194.976L764.84 194.976ZM807.3 98.1818C807.3 89.9674 801.337 84.1748 792.944 84.1748C785.059 84.1748 779.703 87.4409 774.647 93.5477C772.928 87.1246 767.064 84.1748 761.001 84.1748C754.226 84.1748 748.261 87.1246 744.622 92.8103L744.419 92.8103L745.632 85.4403L736.737 85.4403C736.331 87.7551 736.131 89.6511 735.725 91.547L726.223 139.147L735.725 139.147L741.489 112.187C743.206 103.867 748.564 92.1798 758.169 92.1798C763.021 92.1798 765.75 95.6553 765.75 100.076C765.75 101.234 765.547 103.025 765.144 105.131L758.269 139.147L767.773 139.147L773.535 112.187C775.254 103.867 780.612 92.1798 790.217 92.1798C795.069 92.1798 797.798 95.6553 797.798 100.076C797.798 101.234 797.595 103.025 797.192 105.131L790.317 139.147L799.821 139.147L805.784 109.448C806.593 105.659 807.3 101.446 807.3 98.1818L807.3 98.1818ZM1116.55 104.71C1116.55 108.29 1116.14 111.344 1115.64 114.504L1079.34 114.504C1079.14 115.662 1079.04 116.716 1079.04 117.874C1079.04 129.141 1085.71 132.405 1094.91 132.405C1099.66 132.405 1104.82 131.142 1109.47 129.141L1107.95 138.198C1103 139.461 1097.84 140.41 1092.69 140.41C1080.15 140.41 1068.93 135.145 1068.93 116.188C1068.93 101.341 1078.94 84.1748 1097.13 84.1748C1109.57 84.1748 1116.55 91.9681 1116.55 104.71ZM1107.04 103.025C1107.04 96.7069 1103.3 92.1798 1096.12 92.1798C1088.34 92.1798 1082.37 99.2356 1080.35 107.131L1106.74 107.131C1106.94 105.552 1107.04 104.289 1107.04 103.025ZM827.014 139.147L818.117 139.147L834.192 60.1667L843.694 60.1667L837.325 91.2307L837.526 91.2307C840.762 86.7035 846.727 84.1748 853.904 84.1748C865.531 84.1748 872.303 93.0219 872.303 104.605C872.303 124.298 863.509 140.41 846.323 140.41C835.303 140.41 831.664 135.985 828.934 130.195L828.731 130.195L827.014 139.147ZM832.17 118.293C832.17 125.561 836.315 132.405 845.007 132.405C855.825 132.405 862.193 118.821 862.193 105.447C862.193 96.3905 857.24 92.1798 850.669 92.1798C839.549 92.1798 832.17 105.026 832.17 118.293L832.17 118.293ZM1186.91 60.1667L1174.17 121.348C1172.96 127.352 1171.95 133.247 1171.24 139.147L1162.34 139.147C1162.85 136.618 1163.25 133.67 1164.06 130.932L1163.86 130.932C1160.32 138.093 1154.05 140.41 1146.27 140.41C1133.83 140.41 1127.16 130.09 1127.16 117.874C1127.16 101.025 1136.26 84.1748 1153.85 84.1748C1160.82 84.1748 1167.5 87.334 1170.43 94.2851L1170.63 94.2851L1177.4 60.1667L1186.91 60.1667ZM1167.19 106.817C1167.19 98.8123 1162.64 92.1798 1154.35 92.1798C1143.13 92.1798 1137.27 107.027 1137.27 117.137C1137.27 125.666 1141.11 132.405 1149.8 132.405C1161.73 132.405 1167.19 116.925 1167.19 106.817L1167.19 106.817ZM883.121 116.188C883.121 101.341 893.128 84.1748 911.324 84.1748C923.76 84.1748 930.735 91.9681 930.735 104.71C930.735 108.29 930.33 111.344 929.826 114.504L893.532 114.504C893.329 115.662 893.229 116.716 893.229 117.874C893.229 129.141 899.903 132.405 909.101 132.405C913.853 132.405 919.008 131.142 923.658 129.141L922.141 138.198C917.189 139.461 912.033 140.41 906.878 140.41C894.341 140.41 883.121 135.145 883.121 116.188L883.121 116.188ZM894.544 107.131L920.928 107.131C921.131 105.552 921.232 104.289 921.232 103.025C921.232 96.7069 917.492 92.1798 910.314 92.1798C902.53 92.1798 896.565 99.2356 894.544 107.131L894.544 107.131ZM1001.1 60.1667L988.36 121.348C987.145 127.352 986.135 133.247 985.428 139.147L976.531 139.147C977.037 136.618 977.441 133.67 978.25 130.932L978.047 130.932C974.51 138.093 968.242 140.41 960.458 140.41C948.022 140.41 941.35 130.09 941.35 117.874C941.35 101.025 950.448 84.1748 968.039 84.1748C975.014 84.1748 981.686 87.334 984.619 94.2851L984.821 94.2851L991.594 60.1667L1001.1 60.1667ZM981.383 106.817C981.383 98.8123 976.834 92.1798 968.545 92.1798C957.322 92.1798 951.46 107.027 951.46 117.137C951.46 125.666 955.302 132.405 963.994 132.405C975.924 132.405 981.383 116.925 981.383 106.817L981.383 106.817ZM669.205 116.188C669.205 101.341 679.215 84.1748 697.411 84.1748C709.847 84.1748 716.82 91.9681 716.82 104.71C716.82 108.29 716.416 111.344 715.912 114.504L679.619 114.504C679.416 115.662 679.315 116.716 679.315 117.874C679.315 129.141 685.987 132.405 695.188 132.405C699.939 132.405 705.093 131.142 709.744 129.141L708.228 138.198C703.273 139.461 698.12 140.41 692.962 140.41C680.428 140.41 669.205 135.145 669.205 116.188L669.205 116.188ZM680.629 107.131L707.015 107.131C707.218 105.552 707.318 104.289 707.318 103.025C707.318 96.7069 703.579 92.1798 696.401 92.1798C688.616 92.1798 682.651 99.2356 680.629 107.131ZM1055.38 60.1667L1064.89 60.1667L1052.15 121.348C1050.94 127.352 1049.93 133.247 1049.22 139.147L1040.32 139.147C1040.83 136.618 1041.23 133.67 1042.04 130.932L1041.84 130.932C1038.3 138.093 1032.03 140.41 1024.25 140.41C1011.81 140.41 1005.14 130.09 1005.14 117.874C1005.14 101.025 1014.24 84.1748 1031.83 84.1748C1038.8 84.1748 1045.48 87.334 1048.41 94.2851L1048.61 94.2851L1055.38 60.1667ZM1045.17 106.817C1045.17 98.8123 1040.62 92.1798 1032.33 92.1798C1021.11 92.1798 1015.25 107.027 1015.25 117.137C1015.25 125.666 1019.09 132.405 1027.78 132.405C1039.71 132.405 1045.17 116.925 1045.17 106.817' fill='%231c5782' fill-rule='evenodd' opacity='1' stroke='none'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+
+.topicList {
+  list-style-type: none;
+  margin-top: 0px;
+  color: #1F4C73;
+  width: 100%;
+}
+
+.topicList li {
+  padding-bottom: 18px;
+  padding-top: 18px;
+}
+
+.sectionList {
+  list-style-type: none;
+  margin-top: 1px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.sectionList li {
+  border-top: 1px solid #38C99E;
+
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+li {
+  float: left;
+  padding: 10px 10px;
+}
+
+.sectionList li a {
+  color: #63718E;
+  text-decoration: none;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.topicNavigationLi:hover,
+.selectedTopic {
+  cursor: pointer;
+  border-bottom: 4px solid #38C99E;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* General Overview */
+
+.topicOverviewSection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+  background-color: #F6F6FB;
+  border-radius: 20px;
+  padding-left:5px;
+  padding-right:5px;
+  padding-top:5px;
+}
+
+.topicOverviewSectionHeader {
+  color: #1D5781;
+  padding: 11px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.topicOverviewSectionContent {
+  flex-grow: 1;
+  padding-top: 11px;
+  padding-bottom: 20px;
+  text-align: center;
+  display: flex;
+}
+
+.topicOverviewSectionContent .statusContainer {
+  flex-grow: 1;
+  padding-left: 11px;
+  padding-right: 11px;
+  display: flex;
+  flex-direction: column;
+}
+
+.statusContainer h5 {
+  margin: 0;
+}
+
+.statusContainer a {
+  text-decoration: underline;
+  cursor: pointer;
+  padding-top: 8;
+}
+
+.statusContainer .statusIcon {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  margin: auto;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-size: 28px 28px;
+  background-repeat: no-repeat;
+  left: 1em;
+}
+
+.statusContainer .coverageValue {
+  font-size: 24;
+  padding-top: 8;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.statusContainer .coverageLabel {
+  font-size: 12;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Overview */
+
+.overviewDiv {
+  padding-top: 20px;
+}
+
+.topicOverviewDiv {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 15px;
+  border-radius: 30px;
+}
+
+.sectionDiv {
+  min-width: 450px;
+  margin: 16px;
+  background-color: #FFFFFF;
+  padding: 20px;
+  padding-top:5px;
+  border-radius: 30px;
+
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.08); 
+  flex-grow: 1;
+}
+
+.viewDetails {
+  padding-top: 20px;
+  cursor: pointer;
+  text-decoration: underline;
+  position: relative;
+  float: right;
+}
+
+/* Page Sections (collapsible) */
+
+
+.sectionPageDiv {
+  border-radius: 8px;
+  padding: 3px 20px 3px 20px;
+  margin: 5px;
+}
+
+.extended:after {
+  content: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L1 9' transform='rotate(90 5 5)' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  margin-left: 10px;
+
+  cursor: pointer;
+}
+
+.collapsed:after {
+  content: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L1 9' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.holder {
+  transform: rotate(90deg);
+}
+
+/* #################################
+ # edc = error during simulation   #
+ # wdc = warning during simulation #
+ # sdc = success during simulation #
+ # mc = missing simulation        #
+ ################################ */
+
+.icon-mc:before,
+.icon-edc:before,
+.icon-wdc:before,
+.icon-sdc:before {
+    display: inline-block;
+    width: .75em;
+    height: .75em;
+    content: "";
+    background-size: .75em .75em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    margin-right: .5rem;
+    margin-left: .5rem;
+    vertical-align: baseline;
+}
+
+.icon-edc:before {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='rgb(235,87,87)'/%3E%3C/svg%3E");
+}
+
+.icon-wdc:before {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='rgb(242,201,76)'/%3E%3C/svg%3E");
+}
+
+.icon-sdc:before {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='rgb(39,174,96)'/%3E%3C/svg%3E");
+}
+
+.icon-mc:before {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='rgb(128,128,128)'/%3E%3C/svg%3E");
+}
+
+
+/*  Glyphs  */
+
+.warning-glyph::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='13.5' fill='none' stroke='%23F2C94C'/%3E%3Cpath d='M14.0002 16L14.0003 10' stroke='%23F2C94C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 19V19.05' stroke='%23F2C94C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.error-glyph::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='13.5' fill='none' stroke='%23CA3030'/%3E%3Cpath d='M18 10L10 18' stroke='%23CA3030' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18 18L10 10' stroke='%23CA3030' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.ok-glyph::after {
+  background-image:  url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='13.5' fill='none' stroke='%2338C99E'/%3E%3Cpath d='M18 11L12.0037 17L10 15.0012' stroke='%2338C99E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.info-glyph::after {
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='13.5' fill='none' stroke='%23808080'/%3E%3Cpath d='M14.0002 16L14.0003 10' stroke='%23808080' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 19V19.05' stroke='%23808080' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.unknown-glyph::after, .noexecution-glyph::after{
+  background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='14' cy='14' r='13.5' fill='none' stroke='%23808080'/%3E%3Cpath d='M14.0002 16L14.0003 10' stroke='%23808080' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M14 19V19.05' stroke='%23808080' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.ok-glyph::after, .error-glyph::after, .noexecution-glyph::after, .unknown-glyph::after, .info-glyph::after, .warning-glyph::after  {
+  display: inline-block;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  content: "";
+  top: 50%;
+  transform: translate(0%, -50%);
+  left: 0em;
+  background-size: 28px 28px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.ok-glyph, .error-glyph, .noexecution-glyph, .unknown-glyph, .info-glyph, .warning-glyph {
+  padding-left: 2.5em;
+  transform: translate(0%, 0%);
+}
+
+/*  Colors  */
+
+.warning-color {
+  color: #F2C94C;
+}
+
+.error-color {
+  color: #CA3030;
+}
+
+.ok-color {
+  color: #38C99E;
+}
+
+.unknown-color, .noexecution-color {
+  color: gray;
+}
+
+/*  Borders  */
+
+.error-border {
+  border: 1px solid #CA3030;
+}
+
+.ok-border {
+  border: 1px solid #38C99E;
+}
+
+.warning-border {
+  border: 1px solid #F2C94C;
+}
+
+.anchored {
+  cursor: pointer;
+}
+
+/*  Pages */
+
+.table {
+  width: 100%;
+  border: 1px solid #DEEDF7;
+  font-size:14px;
+  border-collapse: collapse;
+
+}
+
+.table td, .table th{
+  border-right: 1px solid #DEEDF7;
+  border-left: 1px solid #DEEDF7;
+}
+
+.table th {
+  text-align: left;
+  color: #1F4C73;
+  padding: 11px;
+  background-color: #DEEDF7;
+
+}
+
+.table tr:nth-of-type(2n+1) {
+  background-color: #F4F9FD;
+}
+.table tr:nth-of-type(2n) {
+  background-color: #FFFFFF;
+}
+
+.table tr td {
+  padding: 10px;
+  -ms-word-break: break-all;
+  word-break: break-all;
+}
+
+.tooltip {
+  position:relative;
+}
+
+.tooltip .tooltiptext {
+  display:none;
+  position:absolute; 
+  z-index:100;
+  border:1px;
+  background-color:white;
+  border-style:solid;
+  border-width:1px;
+  border-color:gray;
+  padding:3px;
+  color:gray; 
+  top:20px; 
+  left:0px;
+}
+
+.tooltip:hover .tooltiptext {
+  display:block;
+}
+
+.dualTable tr td {
+  width: 50%;
+}
+
+.stated-div {
+  border-radius: 5px;
+  padding: 15px;
+  min-height: 22px;
+  margin-bottom: 12px;
+}
+
+.stated-div>h4 {
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.no-margin {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*  Bar chart */
+
+.bar-chart {
+  display:flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  padding: 5px;
+
+}
+
+.chart {
+  flex-grow: 10;
+  border-radius: 15px;
+  overflow: hidden;
+  display:flex;
+}
+
+.bar {
+  height: 21px;
+  margin-left:1px
+}
+
+.errorBar {
+  background-color: #CA3030;
+}
+
+.unknownBar, .noexecutionBar{
+  background-color: #DEEDF7;
+}
+
+.warningBar {
+  background-color: #EEBE2D;
+}
+
+.okBar {
+  background-color: #38C99E;
+}
+
+/*  Coverage table (colored table) */
+
+.coverage-table tr td:nth-child(3),
+.coverage-table tr td:nth-child(4) {
+  background-color: #FFF9EB;
+}
+
+.coverage-table tr td:nth-child(5),
+.coverage-table tr td:nth-child(6){
+  background-color: #EBFAF5;
+}
+
+.coverage-table tr td:nth-child(7),
+.coverage-table tr td:nth-child(8) {
+  background-color: #FDEEEE;
+}
+
+.coverage-table tr td:nth-child(9),
+.coverage-table tr td:nth-child(10) {
+  background-color: #f3fcf9;
+}
+
+.coverage-table-half tr td:nth-child(3){
+  background-color: #EBFAF5;
+}
+
+.coverage-table-half tr td:nth-child(4){
+  background-color: #FDEEEE;
+}
+
+.coverage-table-sizing tr th:nth-child(1){
+  width:40%;
+}
+
+.coverage-table-sizing tr th:nth-child(2),
+.coverage-table-sizing tr th:nth-child(3),
+.coverage-table-sizing tr th:nth-child(4),
+.coverage-table-sizing tr th:nth-child(5),
+.coverage-table-sizing tr th:nth-child(6) {
+  width:12%;
+}
+
+.size-0 {
+  display:none;
+}
+
+.quad-column-table tr td:nth-child(1) {
+  width: 40%;
+}
+.quad-column-table tr td:nth-child(2) {
+  width: 20%;
+}
+.quad-column-table tr td:nth-child(3) {
+  width: 20%;
+}
+.quad-column-table tr td:nth-child(4) {
+  width: 20%;
+}
+
+/*  Gauge charts */
+.sc-gauge  { 
+  width:150px; 
+  height:80px; 
+  margin-bottom:30px; 
+  text-align:center; 
+  margin-right:20px;
+}
+
+.sc-background { 
+  position:relative; 
+  height:80px;
+  margin-bottom:10px; 
+  background-color:#DEEDF7; 
+  border-radius:150px 150px 0 0; 
+  overflow:hidden; 
+  text-align:center;
+}
+
+.sc-mask { 
+  position:absolute; 
+  top:20px; 
+  right:20px; 
+  left:20px; 
+  height:80px; 
+  background-color:#FFFFFF; 
+  border-radius:150px 150px 0 0 
+}
+
+.sc-percentage { 
+  position:absolute; 
+  top:80px; 
+  left:-200%; 
+  width:400%; 
+  height:400%; 
+  margin-left:75px; 
+  background-color:#00aeef; 
+  transform-origin:top center;
+}
+
+.covered {
+  background-color: #38C99E;
+}
+
+.partially {
+  background-color: #F2C94C;
+}
+
+.not_covered, .error, .unreachable_red{
+  background-color: #CA3030;
+}
+
+.inactive{
+  background-color: gray;
+}
+
+.unreachable_blue{
+  background-color: #248ACC;
+}
+
+.justified_green{
+    background-color: #9be4ce;
+}
+
+.sc-min { 
+  float:left; 
+}
+
+.sc-max { 
+  float:right; 
+}
+
+.sc-value { 
+  position:absolute; 
+  top:60%; 
+  left:0; 
+  width:100%;  
+  font-size:24px; 
+}</style>
+<script>/**
+ * Function to show a topic and hide all others.
+ * @param {String} topic Id that will be scrolled to
+ */
+function showPage(topicId) {
+  var topics = ["general","rbt","b2b",];
+  for (var i = 0; i < topics.length; i++) {
+    var topic = topics[i];
+    var topicDiv = document.getElementById(topic);
+    var navigationLi = document.getElementById("navigation_" + topic);
+    if(navigationLi==null){
+        continue;
+    } 
+    var sectionNavigation = document.getElementById("sectionNavigation_" + topic);
+    if (topic === topicId) {
+      topicDiv.classList.remove("hidden");
+      navigationLi.classList.add("selectedTopic");
+      sectionNavigation.classList.remove("hidden");
+    } else {
+      topicDiv.classList.add("hidden");
+      navigationLi.classList.remove("selectedTopic");
+      sectionNavigation.classList.add("hidden");
+    }
+  }
+  
+  //update url for the shown topic (used for history to go back/forward)
+  var urlSplit = window.location.href.split("#");
+  if(urlSplit[1]==null){
+      history.replaceState({topicId: topicId}, "", urlSplit[0] + "#" + topicId);
+  }else{
+      var suffix=urlSplit[1];
+      var suffixSplit = suffix.split("=");
+      if(suffixSplit[0]!=topicId){
+        history.pushState({}, "", urlSplit[0] + "#" + topicId);
+        window.location.href = urlSplit[0] + "#" + topicId;
+      }else{
+         history.replaceState({}, "", urlSplit[0] + "#" + topicId);
+      }
+  }
+  
+  window.scrollTo(0, 0);
+}
+
+/**
+ * Function to scroll to the given element.
+ * @param {String} id Id of element that will be scrolled to
+ */
+function scrollToTargetAdjusted(id) {
+  var element = document.getElementById(id);
+  var headerOffset = 115;
+  var elementPosition = element.getBoundingClientRect().top;
+  var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+  //update url for the id that has been scrolled to (used for history to go back/forward)
+  var urlSplit = window.location.href.split("=");
+  if(urlSplit[1]!=id){
+     history.pushState({}, "", urlSplit[0] + "="+ id);
+     window.location.href = urlSplit[0] + "=" + id;
+  }else{
+     history.replaceState({}, "", urlSplit[0] + "="+ id);
+  }
+  
+  window.scrollTo(0, offsetPosition);
+}
+
+/**
+ * This function combines functionality to switch topics AND scroll to a certain element.
+ * It is NECESSARY to use this for combined target changes, so that the history reflects the singular action
+ */
+function combinedShowTopicAndScroll(topicId, id) {
+  var topics = ["general","rbt","b2b",];
+  for (var i = 0; i < topics.length; i++) {
+    var topic = topics[i];
+    var topicDiv = document.getElementById(topic);
+    var navigationLi = document.getElementById("navigation_" + topic);
+    if(navigationLi==null){
+        continue;
+    } 
+    var sectionNavigation = document.getElementById("sectionNavigation_" + topic);
+    if (topic === topicId) {
+      topicDiv.classList.remove("hidden");
+      navigationLi.classList.add("selectedTopic");
+      sectionNavigation.classList.remove("hidden");
+    } else {
+      topicDiv.classList.add("hidden");
+      navigationLi.classList.remove("selectedTopic");
+      sectionNavigation.classList.add("hidden");
+    }
+  }
+  
+  //update url for the shown topic (used for history to go back/forward)
+  var urlSplit = window.location.href.split("#");
+  if(urlSplit[1]==null){
+      history.replaceState({}, "", urlSplit[0] + "#" + topicId + "=" + id);
+  }else{
+      var suffix=urlSplit[1];
+      var suffixSplit = suffix.split("=");
+      if(suffixSplit[0]!=topicId || suffixSplit[1]!=id){
+        history.pushState({topicId: topicId}, "", urlSplit[0] + "#" + topicId+ "="+ id);
+        window.location.href = urlSplit[0] + "#" + topicId+ "="+ id;
+      }else{
+        history.replaceState({}, "", urlSplit[0] + "#" + topicId + "=" + id);
+      }
+  }
+
+  var element = document.getElementById(id);
+  var headerOffset = 115;
+  var elementPosition = element.getBoundingClientRect().top;
+  var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+  window.scrollTo(0, offsetPosition);
+}
+
+/**
+ * Function to expand a given section.
+ * @param {string} div_id Div that will be expanded if not already
+ * @param {string} clickable_id headline whose twistie will be twisted
+ */
+function expandSectionOnNavigation(div_id, clickable_id) {
+  var div = document.getElementById(div_id);
+  if (div.classList.contains("hidden")) {
+    toggleSection(div_id,clickable_id );
+  }
+}
+
+/**
+ * Function to toggle a given section.
+ * @param {string} div_id div that will be expanded or collapsed
+ * @param {string} clickable_id headline whose twistie will be twisted
+ */
+function toggleSection(div_id, clickable_id ) {
+  var div = document.getElementById(div_id);
+  if (div.classList.contains("hidden")) {
+    div.classList.remove("hidden");
+  } else {
+    div.classList.add("hidden");
+  }
+  var h3 = document.getElementById(clickable_id);
+  h3.classList.toggle("extended");
+  h3.classList.toggle("collapsed");
+}</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body onload="showPage('general');">
+
+    <!-- Navigation header -->
+    <div class="top_spacer"></div>
+    <div id="top_header" class="top_header">
+        <a class="logo"></a>
+        <div class="navigation">
+            <!-- Topic navigation -->
+            <ul class="topicList">
+                <li class="topicNavigationLi" id="navigation_general" onclick="showPage('general');">
+                    <a>General Information</a>
+                </li>
+                <li class="topicNavigationLi" id="navigation_rbt" onclick="showPage('rbt');">
+                    <a>Requirement-based Testing</a>
+                </li>
+            </ul>
+            <!-- Section navigation -->
+            <div id="sectionNavigation_general">
+                <ul class="sectionList">
+                            <li onclick="expandSectionOnNavigation('general_interface_div','general_interface_section'); scrollToTargetAdjusted('general_interface_section')">
+                                <a>Interface</a>
+                            </li>
+                            <li onclick="expandSectionOnNavigation('general_metaInformation_div','general_metaInformation_section'); scrollToTargetAdjusted('general_metaInformation_section')">
+                                <a>Meta Information</a>
+                            </li>
+                </ul>
+            </div>
+            <div id="sectionNavigation_rbt">
+                <ul class="sectionList">
+                            <li onclick="expandSectionOnNavigation('rbt_testExecution_div','rbt_testExecution_section'); scrollToTargetAdjusted('rbt_testExecution_section')">
+                                <a>Test Execution</a>
+                            </li>
+                            <li onclick="expandSectionOnNavigation('rbt_requirementTraceability_div','rbt_requirementTraceability_section'); scrollToTargetAdjusted('rbt_requirementTraceability_section')">
+                                <a>Requirements Traceability</a>
+                            </li>
+                </ul>
+            </div>
+            <div id="sectionNavigation_b2b">
+                <ul class="sectionList">
+                </ul>
+            </div>
+        </div>
+        <ul class="metainfo">
+            <li><span>Creator:</span> developer</li>        
+            <li><span>Creation date:</span> 10/10/2024 17:22</li>     
+        </ul>
+    </div>
+
+    <!-- Page: general -->
+    <div class="overviewDiv" id="general">
+    <!-- Page Overview -->
+    <div class="topicOverviewDiv">
+            <div class="sectionDiv">
+                <a onclick="showPage('rbt');" class="viewDetails">View Details</a>
+                <h3>Requirement-based Testing</h3>
+                <div class="topicOverviewDiv">
+                        <div class="topicOverviewSection">
+                            <div class="topicOverviewSectionHeader">Test Execution</div>
+                            <div class="topicOverviewSectionContent">
+    <div class="statusContainer">
+        <div class="statusIcon ok-glyph"></div>
+    <a class="ok-color" onclick="combinedShowTopicAndScroll('rbt','rbt_testExecution_section');">All tests are passed</a>
+    </div>
+                        </div>
+                    </div>
+                        <div class="topicOverviewSection">
+                            <div class="topicOverviewSectionHeader">Requirements Traceability</div>
+                            <div class="topicOverviewSectionContent">
+    <div class="statusContainer">
+        <div class="statusIcon ok-glyph"></div>
+    <a class="ok-color" onclick="combinedShowTopicAndScroll('rbt','rbt_requirementTraceability_section');">All passed and covered</a>
+    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+        <!-- Page Sections -->
+        <h2 style="padding-left:20px;">General Information</h2>
+        <div class="sectionPageDiv">
+            <h3 id="general_interface_section" onclick="toggleSection('general_interface_div','general_interface_section')" class="extended anchored">
+                1. Interface
+            </h3>
+            <div id="general_interface_div">
+        <a style="padding-left:16px;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
+        AAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dE
+        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAZ5JREFUeNpjYCAVuPVXMjD8Z4RxWfCp
+        5fadtpmFmUkGWezzj59abD7TVH5sYUgmaMDXH798unO8MMSnrTsR/sJn2vfvW7JyWAi5WF9FEkOs
+        N9ebO3/C5oRXPtO+MTFQCAi64OKd59i88PXNh28Lfm7JKgMbEBoayvzs2ZOi//8ZIoDBqwMUYjt6
+        7DgjNwfblpb5+zADkYVl5Y8t2TkgPiNY85Mne6ysrRwSk5IZVFRUGFhZWRkYgQBnNO4q6ABq/Q82
+        wMrKoszayrqzq7sHrubBgwcM1VWVDEuXLUfhL1u+AsNQFkagI0A2I4NDhw4y2NrZYfCBBoJtvXv3
+        LkNCXOzlI8eO64FiQV1eXh7FgIMHgBps7XDypaWlGYAmKYLYIANuPnz4EC754sULhrdv3zBoaWlh
+        5YPA/fv3QdQNsAH/Gf6vnj9vLsK5Bw8y2NjYMsDCEJ0PAiD1IH1gA6SlZXuPHT12oKy0hOH69esM
+        Bw8ewOr/379/g+VB6kDqQfrAsYCWDqKAAvowcTTwC+jvK0CHrJCSkulbvXr1XwZqAADzr7eE2JWX
+        2wAAAABJRU5ErkJggg=="/>
+            Inports: 4
+        </a>
+        <a style="padding-left:16px;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
+        AAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dE
+        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAeVJREFUeNpjYCAK/GdkcOuvxCbDSIx2
+        Dp+pc3/9+RPDy8F+DVn8z99/TwgawOkzbYqEME9CVpAFN7pc6ZRtDCz4NLP7TOsSEeBK6M315ubh
+        ZMOqhomBQsCMT/Lvra27f8u5SR27/FBbTlyA7eW7LwzIePep25BADA0NZX727EnR//8MEUABHaAQ
+        2L3/Gf43HDt2ohFvIII1P3myx8rayiExKZlBRUWF4dWrVwxFhQUMK1etZti/f+8BJydnJwa3CRUM
+        uwrbMbwgIMBXam1tndrV3cMgKirKwMzMzLB3zx4GLi5uBisrKwZFRSUFe/u99gvrolNAGv79+/f/
+        65fPDYxM/38/fvzkMAsjA2MoyGZkcPLkSQZvb284X15e0SEuNub/wkWLwXyQ+uPHj8cCmW2gWFCX
+        l5eHK/79+zfDxYsXGAyNjOBiIBc5OTvD+QoKCqAAkoVF482HDx/CJa9cucygoKjIwMPDAxfbs2c3
+        g4uLK5wPVs/IcB1sADCkV8+fNxfF+WZmZnD+tWvXGPj5+RmkpaXhYiD1IH1gA6SlZXuPHT12oKy0
+        hOH69esMJ0+cABpgjmI7yPkgr4HkQepA6kH64JkJlg6AzChgWtBnxJ7Jfv0H+pCRkWGFlJRM3+rV
+        q/8yUAMAAB74xZ14cGk2AAAAAElFTkSuQmCC"/>
+            Outports: 5
+        </a>
+        <a style="padding-left:16px;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAIGNIUk0AAHomAACAhAAA+gAAAIDo
+        AAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dE
+        AP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAATtJREFUeNpjYBhowIghEtrAxv5FJIuD
+        gznt+48/SiAhTg6Wez9+/J31k+fNNIbVDb9wG+A6WYqHg/mAmryoVJSbPreqjChY+PaT1wzLdl38
+        euvh62dffvx1YNid+wymhRnZZl5G3lNhznqKBeE2HOJCvAysLExgDGK7mKqw/f/PwH/nyeuAX3qm
+        MxmuHfgL0sYE08/6WSgDZHOEqz4LLv+C5EBqQGphYnADuDhZMyJd9bkJBRpIDUgthgHff/xVUpUR
+        IRjqIDUgtRgGkAvgBnByMN+7/eQNQQ0gNSC1GAZ8+/57xvLdF78SMgCkBqQWw4DfvO9mgOJ5xe6L
+        f3BpBsmB1IDUYqYDYLz+kvNYe/vx64Dzt59ziAlxs/FxczL8+fuP4frDlwz9K49+PXT+/mNwQtpc
+        /oFqSXngAQBhNpAu8r39tQAAAABJRU5ErkJggg=="/>
+            Displays: 0
+        </a>
+        <a style="padding-left:16px;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABIUlEQVR4Xs1SzUrDQBDOwXPFd1B7
+        8BjoZn4qAYlnEXyV+gLam2jp3ecQtHrQhxCvXrzYgwURCqYzG7vZbLa9Cf1gSPLNN9/sZiZJ/gOH
+        xuwxwh0hzBDhjRHPQ00UeZ5vSdGvxJQoO5VnCQC7jNmtvhPAOKxx+CsumU265IjgxdfIqWaE2aPP
+        OWhnW3x0tR/mFAxwJpoPiW+/iQURdSXx6YjipkyK0dCTOKRpuq0nbZBy1Ps+wIkjjkcXlYmNJ09q
+        0TZA+LI/yb9zbdAQW13E4JW517x7cT2JGShaBojZQEfVINegZbCS9GCM6VSjxktZrocwn+iSyJzf
+        xegnzClkUgfR+/uQJXkWwVxHVX3XYu2s38y8U1dEoEuy7BTEJNRuBhaOSXKGUqBScgAAAABJRU5E
+        rkJggg=="/>
+            Calibrations: 0
+        </a>
+            </div>
+        </div>
+        <div class="sectionPageDiv">
+            <h3 id="general_metaInformation_section" onclick="toggleSection('general_metaInformation_div','general_metaInformation_section')" class="extended anchored">
+                2. Meta Information
+            </h3>
+            <div id="general_metaInformation_div">
+    <h4>General</h4>
+    <table class="table dualTable">
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Operating System</td>
+            <td>Windows 10 amd64 10.0</td>
+        </tr>
+        <tr>
+            <td>Tool Version</td>
+            <td>24.3p0</td>
+        </tr>
+            <tr>
+                <td>Profile Creator</td>
+                <td>developer</td>
+            </tr>
+            <tr>
+                <td>Profile Creation Date</td>
+                <td>10/10/2024 11:52</td>
+            </tr>
+            <tr>
+                <td>Profile Modifier</td>
+                <td>developer</td>
+            </tr>
+            <tr>
+                <td>Profile Modification Date</td>
+                <td>10/10/2024 16:38</td>
+            </tr>
+            <tr>
+                <td>Profile Path</td>
+                <td>C:\actions-runner\_work\git-based-reference-workflow\git-based-reference-workflow\model\avg_speed.epx</td>
+            </tr>
+    </table>
+
+    <h4>Custom Metadata</h4>
+    <table class="table dualTable">
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+            <tr>
+                <td>Last change (Test Project)</td>
+                <td>[2024-10-10 16:44:26+02:00] Thabo Krick: updated to october-release requirements baseline (hash: ed19a4a3)</td>
+            </tr>
+    </table>
+
+    <h4>Architectures</h4>
+        <h5 class="collapsed anchored" onclick="toggleSection('Simulink_arch_table','Simulink_arch_header')" id="Simulink_arch_header">Simulink</h5>
+        <div class="hidden" id="Simulink_arch_table">
+            <table class="table dualTable">
+                <tr>
+                    <th>Property</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>Creator</td>
+                    <td>developer</td>
+                </tr>
+                <tr>
+                    <td>Import Date</td>
+                    <td>10/10/2024 17:22</td>
+                </tr>
+                <tr>
+                    <td>Matlab Version</td>
+                    <td>Matlab 23.2 (R2023b)</td>
+                </tr>
+                <tr>
+                    <td>Simulink Version</td>
+                    <td>Simulink 23.2 (R2023b)</td>
+                </tr>
+                <tr>
+                    <td>Model Creation Date</td>
+                    <td>07/10/2024 11:16</td>
+                </tr>
+                <tr>
+                    <td>Model Version</td>
+                    <td>1.6</td>
+                </tr>
+                <tr>
+                    <td>Model File</td>
+                    <td>file:/C:/actions-runner/_work/git-based-reference-workflow/git-based-reference-workflow/model/avg_speed.slx</td>
+                </tr>
+                <tr>
+                    <td>Init Script</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Additional Model Information</td>
+                    <td>file:/C:/Users/developer/AppData/Local/Temp/btc_temp_root/3294-5158-10c/AddModelInfo.xml</td>
+                </tr>
+                <tr>
+                    <td>Architecture</td>
+                    <td>Simulink Top Level</td>
+                </tr>
+                <tr>
+                    <td>Parameters</td>
+                    <td>ON</td>
+                </tr>
+                <tr>
+                    <td>Visibility</td>
+                    <td>GREY_BOX</td>
+                </tr>
+            </table>
+            <h6 class="collapsed anchored" onclick="toggleSection('Simulink_arch_table_ref','Simulink_arch_header_ref')" id="Simulink_arch_header_ref">Model Reference</h6>
+        </div>
+    <h5 class="collapsed anchored" onclick="toggleSection('architecture_custom_metadata_table','architecture_custom_metadata_header')" id="architecture_custom_metadata_header">Custom Metadata</h5>
+    <div class="hidden" id="architecture_custom_metadata_table">
+        <table class="table dualTable">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+                <tr>
+                    <td>Last change (Model)</td>
+                    <td>[2024-10-10 17:16:36+02:00] Thabo Krick: Update avg_speed.slx (hash: 027be845)</td>
+                </tr>
+        </table>
+     </div>   
+    
+    <h4>Constants</h4>
+    <table class="table dualTable">
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+        
+            <tr>
+                <td>-Infinity</td>
+                <td>-Infinity</td>
+            </tr>
+            <tr>
+                <td>Infinity</td>
+                <td>Infinity</td>
+            </tr>
+            <tr>
+                <td>NaN</td>
+                <td>NaN</td>
+            </tr>
+    </table>
+    
+    <h4>Report Base</h4>
+    
+    <table class="table dualTable" id="report_base_table">
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Scope</td>
+                <td>avg_speed</td>
+            </tr>
+    </table>
+<h4>Execution Modes</h4>
+    <h5 class="collapsed anchored" onclick="toggleSection('SL MIL (Toplevel)_config_table','SL MIL (Toplevel)_config_header')" id="SL MIL (Toplevel)_config_header">SL MIL (Toplevel)</h5>
+    <table class="table dualTable hidden" id="SL MIL (Toplevel)_config_table">
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Creator</td>
+            <td>developer</td>
+        </tr>
+        <tr>
+            <td>Import Date</td>
+            <td>10/10/2024 17:22</td>
+        </tr>
+        <tr>
+            <td>Matlab Version</td>
+            <td>Matlab 23.2 (R2023b)</td>
+        </tr>
+        <tr>
+            <td>Simulink Version</td>
+            <td>Simulink 23.2 (R2023b)</td>
+        </tr>
+        <tr>
+            <td>Model Creation Date</td>
+            <td>07/10/2024 11:16</td>
+        </tr>
+        <tr>
+            <td>Model Version</td>
+            <td>1.6</td>
+        </tr>
+        <tr>
+            <td>Model File</td>
+            <td>file:/C:/actions-runner/_work/git-based-reference-workflow/git-based-reference-workflow/model/avg_speed.slx</td>
+        </tr>
+        <tr>
+            <td>Init Script</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Additional Model Information</td>
+            <td>file:/C:/Users/developer/AppData/Local/Temp/btc_temp_root/3294-5158-10c/AddModelInfo.xml</td>
+        </tr>
+        <tr>
+            <td>Architecture</td>
+            <td>Simulink Top Level</td>
+        </tr>
+        <tr>
+            <td>Parameters</td>
+            <td>ON</td>
+        </tr>
+        <tr>
+            <td>Visibility</td>
+            <td>GREY_BOX</td>
+        </tr>
+    </table>
+        <h4>Natural Language Requirements</h4>
+            <h5 class="collapsed anchored" onclick="toggleSection('21l_req_table','21l_req_header')" id="21l_req_header">avgspeed</h5>
+              <div class="hidden" id="21l_req_table">         
+                <table class="table dualTable">
+                        <tr>
+                            <th>Property</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Host</td>
+                            <td>http://polarion03.prom.local</td>
+                        </tr>
+                        <tr>
+                            <td>Port</td>
+                            <td>80</td>
+                        </tr>
+                        <tr>
+                            <td>Last import date</td>
+                            <td>10/10/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Name column</td>
+                            <td>Title</td>
+                        </tr>
+                        <tr>
+                            <td>Description column</td>
+                            <td>Description</td>
+                        </tr>
+                        <tr>
+                            <td>Project URL</td>
+                            <td>http://polarion03.prom.local/polarion/redirect/project/avgspeed</td>
+                        </tr>
+                        <tr>
+                            <td>Work Item Types</td>
+                            <td>Requirement</td>
+                        </tr>
+                        <tr>
+                            <td>Baseline Name</td>
+                            <td>october-release</td>
+                        </tr>
+                        <tr>
+                            <td>Baseline Revision</td>
+                            <td>299694</td>
+                        </tr>
+                </table> 
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page: rbt -->
+    <div class="overviewDiv" id="rbt">
+    <!-- Page Overview -->
+    <div class="topicOverviewDiv">
+            <div class="sectionDiv">
+                <a class="viewDetails" onclick="expandSectionOnNavigation('rbt_testExecution_div',' rbt_testExecution_section'); scrollToTargetAdjusted('rbt_testExecution_section')">View Details</a>
+                <h3>Test Execution</h3>
+  <table>
+    <tr>
+    <td>
+    <span style="padding-right: 15px;">
+          SL MIL (Toplevel):</span>
+          </td>
+          <td style="min-width:300px">
+      <div class="bar-chart">
+        <div class="chart">
+    <div class="okBar bar size-5" style="flex-grow : 5"></div>
+    <div class="warningBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
+        </div>
+      </div>
+      </td>
+      <td>
+      <span style="padding-left: 15px;">
+          100% Passed
+        </span>
+      </td>
+      </tr>
+    </table>
+            </div>
+            <div class="sectionDiv">
+                <a class="viewDetails" onclick="expandSectionOnNavigation('rbt_requirementTraceability_div',' rbt_requirementTraceability_section'); scrollToTargetAdjusted('rbt_requirementTraceability_section')">View Details</a>
+                <h3>Requirements Traceability</h3>
+<div style="display:flex; text-align:center;">
+    <div>    <div class="sc-gauge">
+        <div class="sc-background">
+            <div class="sc-percentage covered" style="transform:rotate(180deg)"></div>
+            <div class="sc-mask"></div>
+            <span class="sc-value">100%</span>
+        </div>
+    <span style="font-size:14px;">Informal Requirement Coverage</span>
+    </div>
+</div>
+    <div style="flex-grow:2">
+    <table>
+            <tr>
+              <td><span style="padding-right: 15px;">SL MIL (Toplevel):</span>
+              </td>
+              <td style="min-width:200px">
+                <div class="bar-chart">
+                    
+                    <div class="chart">
+    <div class="okBar bar size-5" style="flex-grow : 5"></div>
+    <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
+    <div class="warningBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
+                    </div>
+                    
+                </div>
+                </td>
+                <td><span style="padding-left: 15px;">100% Passed</span>
+                </td>
+              </tr>
+            
+      </table>
+      <div style="padding-top:12px">Linked Test Case Results</div>
+    </div>
+</div>
+            </div>
+    </div>
+        <!-- Page Sections -->
+        <h2 style="padding-left:20px;">Requirement-based Testing</h2>
+        <div class="sectionPageDiv">
+            <h3 id="rbt_testExecution_section" onclick="toggleSection('rbt_testExecution_div','rbt_testExecution_section')" class="extended anchored">
+                1. Test Execution
+            </h3>
+            <div id="rbt_testExecution_div">
+    <h4 class="anchored collapsed" onclick="toggleSection('testExecution_globalTolerances','testExecution_globalTolerances_header')" id="testExecution_globalTolerances_header">Global Tolerances </h4>
+    <div class="hidden" id="testExecution_globalTolerances">
+          <h5>
+            avg_speed
+          </h5>
+            <table class="table">
+              <tr>
+                <th>Check</th>
+                <th>Name</th>
+                <th>Kind</th>
+                <th>Data type</th>
+                <th>Resolution</th>
+                <th>Offset</th>
+                <th>Relative tolerance [%]
+                </th>
+                <th>Absolute tolerance [Unit]
+                </th>
+                <th>Lead tolerance [s]
+                </th>
+                <th>Lag tolerance [s]
+                </th>
+              </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    fPercentBelow
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    double
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    fPercentAbove
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    double
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    bExtremeDeviation
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    boolean
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    fAvgSpeed
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    double
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+                <tr>
+                  <td style="text-align:center">
+                        <div class="ok-glyph ok-color"></div>
+                  </td>
+                  <td width="*">
+                    bOverspeedWarning
+                  </td>
+                  <td>
+                    Output
+                  </td>
+                  <td>
+                    boolean
+                  </td>
+                  <td>
+                    2^0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                  <td>
+                    0.0
+                  </td>
+                </tr>
+            </table>
+    </div>
+  
+    
+    <h4>Test Execution Results Overview</h4>
+        <table class="table">
+          <tr>
+            <th></th>
+            <th>TestCase</th>
+            <th>Length</th>
+            <th>Requirement (report base)</th>
+            <th>Scope</th>
+            <th>Folder</th>
+              <th>Result (SL MIL (Toplevel))</th>
+          </tr>
+
+
+          
+            <tr>
+              <td style="text-align:center">
+        
+
+    <span class="icon-sdc" title="No problems during simulation"></span>
+              </td>
+              <td>
+    
+    AvgSpeed
+              </td>
+              <td>
+                501
+              </td>
+              <td>
+        <a class="link" onclick="scrollToTargetAdjusted('21Z_req');">
+    <i>
+      1 - Core Functionality
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('21b_req');">
+      1.1 - Average Speed
+        </a>
+    <br>
+              </td>
+              <td>
+                avg_speed
+              </td>
+              <td>
+                Default Test Cases
+              </td>
+                  <td>
+                    <div class="        ok-glyph ok-color
+">
+                      Passed
+                    </div>
+                  </td>
+            </tr>
+          
+            <tr>
+              <td style="text-align:center">
+        
+
+    <span class="icon-sdc" title="No problems during simulation"></span>
+              </td>
+              <td>
+    
+    ExtremeDeviation
+              </td>
+              <td>
+                4
+              </td>
+              <td>
+        <a class="link" onclick="scrollToTargetAdjusted('21d_req');">
+    <i>
+      2 - Deviating Wheel Speeds
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('21f_req');">
+      2.3 - Extreme Deviation Warning
+        </a>
+    <br>
+              </td>
+              <td>
+                avg_speed
+              </td>
+              <td>
+                Default Test Cases
+              </td>
+                  <td>
+                    <div class="        ok-glyph ok-color
+">
+                      Passed
+                    </div>
+                  </td>
+            </tr>
+          
+            <tr>
+              <td style="text-align:center">
+        
+
+    <span class="icon-sdc" title="No problems during simulation"></span>
+              </td>
+              <td>
+    
+    OverspeedWarning
+              </td>
+              <td>
+                200
+              </td>
+              <td>
+        <a class="link" onclick="scrollToTargetAdjusted('21Z_req');">
+    <i>
+      1 - Core Functionality
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('21__req');">
+      1.2 - Overspeed Warning
+        </a>
+    <br>
+              </td>
+              <td>
+                avg_speed
+              </td>
+              <td>
+                Default Test Cases
+              </td>
+                  <td>
+                    <div class="        ok-glyph ok-color
+">
+                      Passed
+                    </div>
+                  </td>
+            </tr>
+          
+            <tr>
+              <td style="text-align:center">
+        
+
+    <span class="icon-sdc" title="No problems during simulation"></span>
+              </td>
+              <td>
+    
+    WheelSpeedDeviationRatio_fast
+              </td>
+              <td>
+                4
+              </td>
+              <td>
+        <a class="link" onclick="scrollToTargetAdjusted('21d_req');">
+    <i>
+      2 - Deviating Wheel Speeds
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('21j_req');">
+      2.1 - Wheel Speed Above Average
+        </a>
+    <br>
+              </td>
+              <td>
+                avg_speed
+              </td>
+              <td>
+                Default Test Cases
+              </td>
+                  <td>
+                    <div class="        ok-glyph ok-color
+">
+                      Passed
+                    </div>
+                  </td>
+            </tr>
+          
+            <tr>
+              <td style="text-align:center">
+        
+
+    <span class="icon-sdc" title="No problems during simulation"></span>
+              </td>
+              <td>
+    
+    WheelSpeedDeviationRatio_slow
+              </td>
+              <td>
+                4
+              </td>
+              <td>
+        <a class="link" onclick="scrollToTargetAdjusted('21d_req');">
+    <i>
+      2 - Deviating Wheel Speeds
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('21h_req');">
+      2.2 - Wheel Speed Below Average
+        </a>
+    <br>
+              </td>
+              <td>
+                avg_speed
+              </td>
+              <td>
+                Default Test Cases
+              </td>
+                  <td>
+                    <div class="        ok-glyph ok-color
+">
+                      Passed
+                    </div>
+                  </td>
+            </tr>
+          
+
+        </table>
+  
+  <h4>Detailed Execution Results (failed only)</h4>
+  <div id="testExecution_resultsDetails">
+      There are no failed results.
+  </div>
+            </div>
+        </div>
+        <div class="sectionPageDiv">
+            <h3 id="rbt_requirementTraceability_section" onclick="toggleSection('rbt_requirementTraceability_div','rbt_requirementTraceability_section')" class="extended anchored">
+                2. Requirements Traceability
+            </h3>
+            <div id="rbt_requirementTraceability_div">
+  <h4>avgspeed</h4>
+  <table class="table">
+  <tr>
+    <th>Requirement ID</th> 
+    <th>Description</th>
+    <th>Test Cases</th>
+    <th>Covered</th>
+    <th >Passed (SL MIL (Toplevel))</th>
+  </tr>
+  <tr id="21Z_req">
+    <td>        <i>1 - Core Functionality</i>
+</td>
+    <td></td>
+    <td>2</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="21__req">
+    <td>        1.2 - Overspeed Warning
+</td>
+    <td>The component shall issue an overspeed warning if the speed is above 180km/h</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="21b_req">
+    <td>        1.1 - Average Speed
+</td>
+    <td>The component shall calculate the average speed of the four wheels, including standstill and backwards movement (negative speeds)</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="21d_req">
+    <td>        <i>2 - Deviating Wheel Speeds</i>
+</td>
+    <td></td>
+    <td>3</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="21f_req">
+    <td>        2.3 - Extreme Deviation Warning
+</td>
+    <td>The component shall issue a warning if any wheel speed deviates more than 25% from the average speed and the average speed is above 30km/h</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="21h_req">
+    <td>        2.2 - Wheel Speed Below Average
+</td>
+    <td>The component shall indicate how much slower than the average speed the slowest wheel is (as negative percentage)</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        100%
+</td>
+  </tr>
+  <tr id="21j_req">
+    <td>        2.1 - Wheel Speed Above Average
+</td>
+    <td>The component shall indicate how much faster than the average speed the fastest wheel is (as positive percentage)</td>
+    <td>1</td>
+<td>
+    <div class="ok-glyph ok-color">Covered
+</div>
+</td>
+    <td>        100%
+</td>
+  </tr>
+</table>
+            </div>
+        </div>
+    </div>
+    <!-- Page: b2b -->
+    <div class="overviewDiv" id="b2b">
+    <!-- Page Overview -->
+    <div class="topicOverviewDiv">
+    </div>
+    </div>
+
+    <script>
+        addEventListener('scroll', function a(event) {document.getElementById("top_header").style.left=40-pageXOffset+"px"});
+        
+        //event listener for back/forward buttons 
+        addEventListener("popstate", function(e) {
+            var urlSplit = window.location.href.split("#");
+            if(urlSplit[1]!=null){
+              var suffixSplit = urlSplit[1].split("=");
+              if(suffixSplit[1]!=null){
+              combinedShowTopicAndScroll(suffixSplit[0], suffixSplit[1]);
+              }else{
+                showPage(suffixSplit[0]);
+              }
+            }
+        });
+    </script>
+    
+</body>
+</html>
