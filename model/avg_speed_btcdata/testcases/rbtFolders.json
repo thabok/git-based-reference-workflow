@@ -1,5 +1,5 @@
 {
   "Default Test Cases" : {
-    "avg_speed" : [ "OverspeedWarning", "WheelSpeedDeviationRatio_fast", "AvgSpeed", "WheelSpeedDeviationRatio_slow", "ExtremeDevWarning" ]
+    "avg_speed" : [ "OverspeedWarning", "WheelSpeedDeviationRatio_fast", "AvgSpeed", "WheelSpeedDeviationRatio_slow" ]
   }
 }

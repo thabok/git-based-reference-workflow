@@ -5,8 +5,7 @@
     "scopePath":"",
     "architecture":"avg_speed",
     "description":"Checking different combinations of wheels with deviating speeds",
-    "length":"4",
-    "draft":"false"
+    "length":"4"
   },
   "vectorContent":{
     "steps":[ {

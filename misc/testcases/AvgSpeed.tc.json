@@ -5,8 +5,7 @@
     "scopePath":"",
     "architecture":"avg_speed",
     "description":"Checks if the average speed is calculated correctly (incl. negative speed & zero)",
-    "length":"501",
-    "draft":"false"
+    "length":"501"
   },
   "vectorContent":{
     "steps":[ {

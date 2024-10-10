@@ -5,16 +5,15 @@
     "scopePath":"",
     "architecture":"avg_speed",
     "description":"Checks if the warning is correctly issued for extreme deviations when faster than 30km/h",
-    "length":"2",
-    "draft":"false"
+    "length":"3"
   },
   "vectorContent":{
     "steps":[ {
       "step":{
         "number":"0",
-        "comment":"all good",
+        "comment":"no deviation",
         "inputs":[ {
-          "fWheelSpeedFL":"58"
+          "fWheelSpeedFL":"50"
         }, {
           "fWheelSpeedFR":"50"
         }, {
@@ -25,12 +24,25 @@
         "outputs":[ {
           "bExtremeDeviation":"0"
         }, {
-          "fAvgSpeed":"52"
+          "fAvgSpeed":"50"
         } ]
       }
     }, {
       "step":{
         "number":"1",
+        "comment":"acceptable deviation",
+        "inputs":[ {
+          "fWheelSpeedFL":"58"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        }, {
+          "fAvgSpeed":"52"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
         "comment":"extreme deviation!",
         "inputs":[ {
           "fWheelSpeedFL":"90"
@@ -43,7 +55,6 @@
       }
     } ]
   },
-  "requirements":[ "subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-83" ],
   "interface":{
     "inputs":[ "fWheelSpeedFL", "fWheelSpeedFR", "fWheelSpeedRL", "fWheelSpeedRR" ],
     "outputs":[ "bExtremeDeviation", "fAvgSpeed", "bOverspeedWarning" ]

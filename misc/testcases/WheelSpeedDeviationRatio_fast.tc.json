@@ -1,12 +1,11 @@
 {
   "version":"1.1",
   "metaData":{
-    "name":"WheelSpeedDeviationRatio_slow",
+    "name":"WheelSpeedDeviationRatio_fast",
     "scopePath":"",
     "architecture":"avg_speed",
     "description":"Checking different combinations of wheels with deviating speeds",
-    "length":"4",
-    "draft":"false"
+    "length":"4"
   },
   "vectorContent":{
     "steps":[ {
@@ -23,7 +22,7 @@
           "fWheelSpeedRR":"0"
         } ],
         "outputs":[ {
-          "fPercentBelow":"0"
+          "fPercentAbove":"0"
         }, {
           "fAvgSpeed":"0"
         } ]
@@ -31,26 +30,26 @@
     }, {
       "step":{
         "number":"1",
-        "comment":"60% below",
+        "comment":"50% above",
         "inputs":[ {
-          "fWheelSpeedFL":"10"
+          "fWheelSpeedFL":"18"
         }, {
-          "fWheelSpeedFR":"30"
+          "fWheelSpeedFR":"10"
         }, {
-          "fWheelSpeedRL":"30"
+          "fWheelSpeedRL":"10"
         }, {
-          "fWheelSpeedRR":"30"
+          "fWheelSpeedRR":"10"
         } ],
         "outputs":[ {
-          "fPercentBelow":"-60"
+          "fPercentAbove":"50"
         }, {
-          "fAvgSpeed":"25"
+          "fAvgSpeed":"12"
         } ]
       }
     }, {
       "step":{
         "number":"2",
-        "comment":"25% below",
+        "comment":"25% above",
         "inputs":[ {
           "fWheelSpeedFL":"15"
         }, {
@@ -61,7 +60,7 @@
           "fWheelSpeedRR":"15"
         } ],
         "outputs":[ {
-          "fPercentBelow":"-25"
+          "fPercentAbove":"25"
         }, {
           "fAvgSpeed":"20"
         } ]
@@ -69,7 +68,7 @@
     }, {
       "step":{
         "number":"3",
-        "comment":"100% below",
+        "comment":"300% above",
         "inputs":[ {
           "fWheelSpeedFL":"0"
         }, {
@@ -80,14 +79,14 @@
           "fWheelSpeedRR":"10"
         } ],
         "outputs":[ {
-          "fPercentBelow":"-100"
+          "fPercentAbove":"300"
         }, {
           "fAvgSpeed":"2.5"
         } ]
       }
     } ]
   },
-  "requirements":[ "subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-94" ],
+  "requirements":[ "subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-93" ],
   "interface":{
     "inputs":[ "fWheelSpeedFL", "fWheelSpeedFR", "fWheelSpeedRL", "fWheelSpeedRR" ],
     "outputs":[ "fPercentBelow", "fPercentAbove", "bExtremeDeviation", "fAvgSpeed", "bOverspeedWarning" ]

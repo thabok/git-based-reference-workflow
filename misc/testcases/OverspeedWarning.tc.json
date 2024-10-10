@@ -5,8 +5,7 @@
     "scopePath":"",
     "architecture":"avg_speed",
     "description":"slowly increases speed until it exceeds the limit of 180",
-    "length":"200",
-    "draft":"false"
+    "length":"200"
   },
   "vectorContent":{
     "steps":[ {
