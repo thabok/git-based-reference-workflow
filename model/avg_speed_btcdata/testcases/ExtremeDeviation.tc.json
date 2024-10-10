@@ -1,0 +1,82 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"ExtremeDeviation",
+    "scopePath":"",
+    "architecture":"avg_speed",
+    "length":"4",
+    "draft":"false"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "comment":"high percentage but avg speed too low",
+        "inputs":[ {
+          "fWheelSpeedFL":"3"
+        }, {
+          "fWheelSpeedFR":"3"
+        }, {
+          "fWheelSpeedRL":"1"
+        }, {
+          "fWheelSpeedRR":"1"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        }, {
+          "fAvgSpeed":"2"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "comment":"no deviation",
+        "inputs":[ {
+          "fWheelSpeedFL":"50"
+        }, {
+          "fWheelSpeedFR":"50"
+        }, {
+          "fWheelSpeedRL":"50"
+        }, {
+          "fWheelSpeedRR":"50"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        }, {
+          "fAvgSpeed":"50"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "comment":"acceptable deviation",
+        "inputs":[ {
+          "fWheelSpeedFL":"58"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        }, {
+          "fAvgSpeed":"52"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"3",
+        "comment":"extreme deviation",
+        "inputs":[ {
+          "fWheelSpeedFL":"80"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        }, {
+          "fAvgSpeed":"57.5"
+        } ]
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-95" ],
+  "interface":{
+    "inputs":[ "fWheelSpeedFL", "fWheelSpeedFR", "fWheelSpeedRL", "fWheelSpeedRR" ],
+    "outputs":[ "bExtremeDeviation", "fAvgSpeed", "bOverspeedWarning" ]
+  }
+}
