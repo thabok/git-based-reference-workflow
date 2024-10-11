@@ -2,6 +2,10 @@
 
 Welcome to the example repository for the webinar "Git-Based Reference Workflow for Development & Test in Automotive Embedded". This repository demonstrates a structured approach to managing development and testing workflows using Git.
 
+## Main branch health
+- ![CI](https://github.com/thabok/git-based-reference-workflow/actions/workflows/pipeline.yml/badge.svg?branch=main)
+- [Test Report](https://thabok.github.io/git-based-reference-workflow/report.html)
+
 ## Repository Structure
 
 ### Model Directory
