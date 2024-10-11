@@ -4,14 +4,14 @@
     "Creator" : "developer",
     "Creation Date" : "10 Oct 2024, 11:52",
     "Modifier" : "developer",
-    "Modification Date" : "11 Oct 2024, 12:07",
+    "Modification Date" : "11 Oct 2024, 16:07",
     "OS" : "Windows",
     "Path" : "file:/E:/work/git-based-reference-workflow/model/avg_speed.epx"
   },
   "Architectures" : {
     "Simulink" : {
       "Creator" : "developer",
-      "Import Date" : "11/10/2024 12:02",
+      "Import Date" : "11/10/2024 15:53",
       "Matlab Version" : "Matlab 23.2 (R2023b)",
       "Simulink Version" : "Simulink 23.2 (R2023b)",
       "Model Creation Date" : "07/10/2024 11:16",
@@ -26,9 +26,9 @@
   },
   "Requirements Sources" : {
     "avgspeed" : {
-      "Baseline Name" : "september-release",
+      "Baseline Name" : "october-release",
       "Project URL" : "http://polarion03.prom.local/polarion/redirect/project/avgspeed",
-      "Baseline Revision" : "299677"
+      "Baseline Revision" : "299694"
     }
   },
   "constants" : {

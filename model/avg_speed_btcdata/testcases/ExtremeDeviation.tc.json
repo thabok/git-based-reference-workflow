@@ -1,0 +1,74 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"ExtremeDeviation",
+    "scopePath":"",
+    "architecture":"avg_speed",
+    "description":"no warning expected:\r\n- low speed\r\n- no deviation\r\n- deviation below 25%\r\n\r\nwarning expected:\r\n- deviation above 25% at >= 30km/h",
+    "length":"31",
+    "draft":"false"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "comment":"low speed",
+        "inputs":[ {
+          "fWheelSpeedFL":"3"
+        }, {
+          "fWheelSpeedFR":"1"
+        }, {
+          "fWheelSpeedRL":"1"
+        }, {
+          "fWheelSpeedRR":"1"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"af(0, 20)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "comment":"no deviation",
+        "inputs":[ {
+          "fWheelSpeedFL":"50"
+        }, {
+          "fWheelSpeedFR":"50"
+        }, {
+          "fWheelSpeedRL":"50"
+        }, {
+          "fWheelSpeedRR":"50"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "inputs":[ {
+          "fWheelSpeedFL":"sg(Ramp, 29, Simulink, true, true, m=1, Starting value=51, End value=)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"19",
+        "comment":"acceptable deviation"
+      }
+    }, {
+      "step":{
+        "number":"20",
+        "comment":"deviation too high (=extreme)",
+        "outputs":[ {
+          "bExtremeDeviation":"af(1, 11)"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"30"
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-95" ],
+  "interface":{
+    "inputs":[ "fWheelSpeedFL", "fWheelSpeedFR", "fWheelSpeedRL", "fWheelSpeedRR" ],
+    "outputs":[ "fPercentBelow", "fPercentAbove", "bExtremeDeviation", "bOverspeedWarning" ]
+  }
+}
