@@ -857,7 +857,7 @@ function toggleSection(div_id, clickable_id ) {
         </div>
         <ul class="metainfo">
             <li><span>Creator:</span> developer</li>        
-            <li><span>Creation date:</span> 10/10/2024 17:22</li>     
+            <li><span>Creation date:</span> 11/10/2024 11:50</li>     
         </ul>
     </div>
 
@@ -873,8 +873,8 @@ function toggleSection(div_id, clickable_id ) {
                             <div class="topicOverviewSectionHeader">Test Execution</div>
                             <div class="topicOverviewSectionContent">
     <div class="statusContainer">
-        <div class="statusIcon ok-glyph"></div>
-    <a class="ok-color" onclick="combinedShowTopicAndScroll('rbt','rbt_testExecution_section');">All tests are passed</a>
+        <div class="statusIcon error-glyph"></div>
+    <a class="error-color" onclick="combinedShowTopicAndScroll('rbt','rbt_testExecution_section');">There are errors</a>
     </div>
                         </div>
                     </div>
@@ -882,8 +882,8 @@ function toggleSection(div_id, clickable_id ) {
                             <div class="topicOverviewSectionHeader">Requirements Traceability</div>
                             <div class="topicOverviewSectionContent">
     <div class="statusContainer">
-        <div class="statusIcon ok-glyph"></div>
-    <a class="ok-color" onclick="combinedShowTopicAndScroll('rbt','rbt_requirementTraceability_section');">All passed and covered</a>
+        <div class="statusIcon error-glyph"></div>
+    <a class="error-color" onclick="combinedShowTopicAndScroll('rbt','rbt_requirementTraceability_section');">Not all requirements are passed</a>
     </div>
                         </div>
                     </div>
@@ -983,7 +983,7 @@ function toggleSection(div_id, clickable_id ) {
             </tr>
             <tr>
                 <td>Profile Modification Date</td>
-                <td>10/10/2024 16:38</td>
+                <td>10/10/2024 12:46</td>
             </tr>
             <tr>
                 <td>Profile Path</td>
@@ -999,7 +999,7 @@ function toggleSection(div_id, clickable_id ) {
         </tr>
             <tr>
                 <td>Last change (Test Project)</td>
-                <td>[2024-10-10 16:44:26+02:00] Thabo Krick: updated to october-release requirements baseline (hash: ed19a4a3)</td>
+                <td>[2024-10-11 11:43:59+02:00] Thabo Krick: september-baseline (hash: 136dc614)</td>
             </tr>
     </table>
 
@@ -1017,7 +1017,7 @@ function toggleSection(div_id, clickable_id ) {
                 </tr>
                 <tr>
                     <td>Import Date</td>
-                    <td>10/10/2024 17:22</td>
+                    <td>11/10/2024 11:50</td>
                 </tr>
                 <tr>
                     <td>Matlab Version</td>
@@ -1071,7 +1071,7 @@ function toggleSection(div_id, clickable_id ) {
             </tr>
                 <tr>
                     <td>Last change (Model)</td>
-                    <td>[2024-10-10 17:16:36+02:00] Thabo Krick: Update avg_speed.slx (hash: 027be845)</td>
+                    <td>[2024-10-11 11:43:59+02:00] Thabo Krick: september-baseline (hash: 136dc614)</td>
                 </tr>
         </table>
      </div>   
@@ -1122,7 +1122,7 @@ function toggleSection(div_id, clickable_id ) {
         </tr>
         <tr>
             <td>Import Date</td>
-            <td>10/10/2024 17:22</td>
+            <td>11/10/2024 11:50</td>
         </tr>
         <tr>
             <td>Matlab Version</td>
@@ -1166,8 +1166,8 @@ function toggleSection(div_id, clickable_id ) {
         </tr>
     </table>
         <h4>Natural Language Requirements</h4>
-            <h5 class="collapsed anchored" onclick="toggleSection('21l_req_table','21l_req_header')" id="21l_req_header">avgspeed</h5>
-              <div class="hidden" id="21l_req_table">         
+            <h5 class="collapsed anchored" onclick="toggleSection('21j_req_table','21j_req_header')" id="21j_req_header">avgspeed</h5>
+              <div class="hidden" id="21j_req_table">         
                 <table class="table dualTable">
                         <tr>
                             <th>Property</th>
@@ -1203,14 +1203,62 @@ function toggleSection(div_id, clickable_id ) {
                         </tr>
                         <tr>
                             <td>Baseline Name</td>
-                            <td>october-release</td>
+                            <td>september-release</td>
                         </tr>
                         <tr>
                             <td>Baseline Revision</td>
-                            <td>299694</td>
+                            <td>299677</td>
                         </tr>
                 </table> 
               </div>
+        <h4>Test Case Specifications</h4>
+            <h5 class="collapsed anchored" onclick="toggleSection('avgspeed_testCase_table','avgspeed_testCase_header')" id="avgspeed_testCase_header">avgspeed</h5>
+            <table class="table dualTable hidden" id="avgspeed_testCase_table">
+                    <tr>
+                        <td>Scope</td>
+                        <td>avg_speed</td>
+                    </tr>
+                    <tr>
+                        <td>Folder</td>
+                        <td>Default Test Cases</td>
+                    </tr>
+                    <tr>
+                        <td>Host</td>
+                        <td>http://polarion03.prom.local</td>
+                    </tr>
+                    <tr>
+                        <td>Work Item Types</td>
+                        <td>Test Case</td>
+                    </tr>
+                    <tr>
+                        <td>Project URL</td>
+                        <td>http://polarion03.prom.local/polarion/redirect/project/avgspeed</td>
+                    </tr>
+                    <tr>
+                        <td>Port</td>
+                        <td>80</td>
+                    </tr>
+                    <tr>
+                        <td>Project ID</td>
+                        <td>avgspeed</td>
+                    </tr>
+                    <tr>
+                        <td>Linked Requirement Role</td>
+                        <td>verifies</td>
+                    </tr>
+                    <tr>
+                        <td>Consider Step Comments</td>
+                        <td>true</td>
+                    </tr>
+                    <tr>
+                        <td>Draft</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>Execution Modes</td>
+                        <td>SL MIL (Toplevel)</td>
+                    </tr>
+            </table>
             </div>
         </div>
     </div>
@@ -1230,18 +1278,18 @@ function toggleSection(div_id, clickable_id ) {
           <td style="min-width:300px">
       <div class="bar-chart">
         <div class="chart">
-    <div class="okBar bar size-5" style="flex-grow : 5"></div>
+    <div class="okBar bar size-0" style="flex-grow : 0"></div>
     <div class="warningBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
-    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-5" style="flex-grow : 5"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
         </div>
       </div>
       </td>
       <td>
       <span style="padding-left: 15px;">
-          100% Passed
+          0% Passed
         </span>
       </td>
       </tr>
@@ -1269,17 +1317,17 @@ function toggleSection(div_id, clickable_id ) {
                 <div class="bar-chart">
                     
                     <div class="chart">
-    <div class="okBar bar size-5" style="flex-grow : 5"></div>
+    <div class="okBar bar size-0" style="flex-grow : 0"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
     <div class="warningBar bar size-0" style="flex-grow : 0"></div>
     <div class="errorBar bar size-0" style="flex-grow : 0"></div>
-    <div class="errorBar bar size-0" style="flex-grow : 0"></div>
+    <div class="errorBar bar size-4" style="flex-grow : 4"></div>
     <div class="unknownBar bar size-0" style="flex-grow : 0"></div>
                     </div>
                     
                 </div>
                 </td>
-                <td><span style="padding-left: 15px;">100% Passed</span>
+                <td><span style="padding-left: 15px;">0% Passed</span>
                 </td>
               </tr>
             
@@ -1500,11 +1548,14 @@ function toggleSection(div_id, clickable_id ) {
               <td style="text-align:center">
         
 
-    <span class="icon-sdc" title="No problems during simulation"></span>
+    <span class="icon-edc" title="Errors during simulation"></span>
+        
               </td>
               <td>
     
-    AvgSpeed
+    <a class="link" onclick="expandSectionOnNavigation('AvgSpeed_avg_speed_testcase_div','AvgSpeed_avg_speed_testcase_header'); scrollToTargetAdjusted('AvgSpeed_avg_speed_state_div');">
+        AvgSpeed
+    </a>
               </td>
               <td>
                 501
@@ -1528,9 +1579,9 @@ function toggleSection(div_id, clickable_id ) {
                 Default Test Cases
               </td>
                   <td>
-                    <div class="        ok-glyph ok-color
+                    <div class="        error-glyph error-color
 ">
-                      Passed
+                      Error
                     </div>
                   </td>
             </tr>
@@ -1539,26 +1590,19 @@ function toggleSection(div_id, clickable_id ) {
               <td style="text-align:center">
         
 
-    <span class="icon-sdc" title="No problems during simulation"></span>
+    <span class="icon-edc" title="Errors during simulation"></span>
+        
               </td>
               <td>
     
-    ExtremeDeviation
+    <a class="link" onclick="expandSectionOnNavigation('ExtremeDeviation_avg_speed_testcase_div','ExtremeDeviation_avg_speed_testcase_header'); scrollToTargetAdjusted('ExtremeDeviation_avg_speed_state_div');">
+        ExtremeDeviation
+    </a>
               </td>
               <td>
                 4
               </td>
               <td>
-        <a class="link" onclick="scrollToTargetAdjusted('21d_req');">
-    <i>
-      2 - Deviating Wheel Speeds
-    </i>
-        </a>
-    <br>
-        <a class="link" onclick="scrollToTargetAdjusted('21f_req');">
-      2.3 - Extreme Deviation Warning
-        </a>
-    <br>
               </td>
               <td>
                 avg_speed
@@ -1567,9 +1611,9 @@ function toggleSection(div_id, clickable_id ) {
                 Default Test Cases
               </td>
                   <td>
-                    <div class="        ok-glyph ok-color
+                    <div class="        error-glyph error-color
 ">
-                      Passed
+                      Error
                     </div>
                   </td>
             </tr>
@@ -1578,11 +1622,14 @@ function toggleSection(div_id, clickable_id ) {
               <td style="text-align:center">
         
 
-    <span class="icon-sdc" title="No problems during simulation"></span>
+    <span class="icon-edc" title="Errors during simulation"></span>
+        
               </td>
               <td>
     
-    OverspeedWarning
+    <a class="link" onclick="expandSectionOnNavigation('OverspeedWarning_avg_speed_testcase_div','OverspeedWarning_avg_speed_testcase_header'); scrollToTargetAdjusted('OverspeedWarning_avg_speed_state_div');">
+        OverspeedWarning
+    </a>
               </td>
               <td>
                 200
@@ -1606,9 +1653,9 @@ function toggleSection(div_id, clickable_id ) {
                 Default Test Cases
               </td>
                   <td>
-                    <div class="        ok-glyph ok-color
+                    <div class="        error-glyph error-color
 ">
-                      Passed
+                      Error
                     </div>
                   </td>
             </tr>
@@ -1617,50 +1664,14 @@ function toggleSection(div_id, clickable_id ) {
               <td style="text-align:center">
         
 
-    <span class="icon-sdc" title="No problems during simulation"></span>
-              </td>
-              <td>
-    
-    WheelSpeedDeviationRatio_fast
-              </td>
-              <td>
-                4
-              </td>
-              <td>
-        <a class="link" onclick="scrollToTargetAdjusted('21d_req');">
-    <i>
-      2 - Deviating Wheel Speeds
-    </i>
-        </a>
-    <br>
-        <a class="link" onclick="scrollToTargetAdjusted('21j_req');">
-      2.1 - Wheel Speed Above Average
-        </a>
-    <br>
-              </td>
-              <td>
-                avg_speed
-              </td>
-              <td>
-                Default Test Cases
-              </td>
-                  <td>
-                    <div class="        ok-glyph ok-color
-">
-                      Passed
-                    </div>
-                  </td>
-            </tr>
-          
-            <tr>
-              <td style="text-align:center">
+    <span class="icon-edc" title="Errors during simulation"></span>
         
-
-    <span class="icon-sdc" title="No problems during simulation"></span>
               </td>
               <td>
     
-    WheelSpeedDeviationRatio_slow
+    <a class="link" onclick="expandSectionOnNavigation('WheelSpeedDeviationRatio_fast_avg_speed_testcase_div','WheelSpeedDeviationRatio_fast_avg_speed_testcase_header'); scrollToTargetAdjusted('WheelSpeedDeviationRatio_fast_avg_speed_state_div');">
+        WheelSpeedDeviationRatio_fast
+    </a>
               </td>
               <td>
                 4
@@ -1673,6 +1684,48 @@ function toggleSection(div_id, clickable_id ) {
         </a>
     <br>
         <a class="link" onclick="scrollToTargetAdjusted('21h_req');">
+      2.1 - Wheel Speed Above Average
+        </a>
+    <br>
+              </td>
+              <td>
+                avg_speed
+              </td>
+              <td>
+                Default Test Cases
+              </td>
+                  <td>
+                    <div class="        error-glyph error-color
+">
+                      Error
+                    </div>
+                  </td>
+            </tr>
+          
+            <tr>
+              <td style="text-align:center">
+        
+
+    <span class="icon-edc" title="Errors during simulation"></span>
+        
+              </td>
+              <td>
+    
+    <a class="link" onclick="expandSectionOnNavigation('WheelSpeedDeviationRatio_slow_avg_speed_testcase_div','WheelSpeedDeviationRatio_slow_avg_speed_testcase_header'); scrollToTargetAdjusted('WheelSpeedDeviationRatio_slow_avg_speed_state_div');">
+        WheelSpeedDeviationRatio_slow
+    </a>
+              </td>
+              <td>
+                4
+              </td>
+              <td>
+        <a class="link" onclick="scrollToTargetAdjusted('21d_req');">
+    <i>
+      2 - Deviating Wheel Speeds
+    </i>
+        </a>
+    <br>
+        <a class="link" onclick="scrollToTargetAdjusted('21f_req');">
       2.2 - Wheel Speed Below Average
         </a>
     <br>
@@ -1684,9 +1737,9 @@ function toggleSection(div_id, clickable_id ) {
                 Default Test Cases
               </td>
                   <td>
-                    <div class="        ok-glyph ok-color
+                    <div class="        error-glyph error-color
 ">
-                      Passed
+                      Error
                     </div>
                   </td>
             </tr>
@@ -1696,7 +1749,116 @@ function toggleSection(div_id, clickable_id ) {
   
   <h4>Detailed Execution Results (failed only)</h4>
   <div id="testExecution_resultsDetails">
-      There are no failed results.
+                <div class="stated-div error-border" id="AvgSpeed_avg_speed_state_div">
+                    <h4 class="error-color collapsed anchored float-left" onclick="toggleSection('AvgSpeed_avg_speed_testcase_div','AvgSpeed_avg_speed_testcase_header')" id="AvgSpeed_avg_speed_testcase_header">
+                    AvgSpeed</h4>
+                    <h4 style="float:right; margin-right:50px, margin-left:50px" class="no-margin error-color error-glyph">ERROR</h4>
+                    <div class="hidden" id="AvgSpeed_avg_speed_testcase_div" style="clear:both">
+                        <h5>Scope: avg_speed</h5>
+                        <table class="table dualTable">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr>
+                                <td>Test Case Description</td>
+                                <td>Checks if the average speed is calculated correctly</td>
+                            </tr>
+                            <tr>
+                                <td>Comment</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="stated-div error-border" id="ExtremeDeviation_avg_speed_state_div">
+                    <h4 class="error-color collapsed anchored float-left" onclick="toggleSection('ExtremeDeviation_avg_speed_testcase_div','ExtremeDeviation_avg_speed_testcase_header')" id="ExtremeDeviation_avg_speed_testcase_header">
+                    ExtremeDeviation</h4>
+                    <h4 style="float:right; margin-right:50px, margin-left:50px" class="no-margin error-color error-glyph">ERROR</h4>
+                    <div class="hidden" id="ExtremeDeviation_avg_speed_testcase_div" style="clear:both">
+                        <h5>Scope: avg_speed</h5>
+                        <table class="table dualTable">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr>
+                                <td>Test Case Description</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Comment</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="stated-div error-border" id="OverspeedWarning_avg_speed_state_div">
+                    <h4 class="error-color collapsed anchored float-left" onclick="toggleSection('OverspeedWarning_avg_speed_testcase_div','OverspeedWarning_avg_speed_testcase_header')" id="OverspeedWarning_avg_speed_testcase_header">
+                    OverspeedWarning</h4>
+                    <h4 style="float:right; margin-right:50px, margin-left:50px" class="no-margin error-color error-glyph">ERROR</h4>
+                    <div class="hidden" id="OverspeedWarning_avg_speed_testcase_div" style="clear:both">
+                        <h5>Scope: avg_speed</h5>
+                        <table class="table dualTable">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr>
+                                <td>Test Case Description</td>
+                                <td>slowly increases speed until it exceeds the limit of 180</td>
+                            </tr>
+                            <tr>
+                                <td>Comment</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="stated-div error-border" id="WheelSpeedDeviationRatio_fast_avg_speed_state_div">
+                    <h4 class="error-color collapsed anchored float-left" onclick="toggleSection('WheelSpeedDeviationRatio_fast_avg_speed_testcase_div','WheelSpeedDeviationRatio_fast_avg_speed_testcase_header')" id="WheelSpeedDeviationRatio_fast_avg_speed_testcase_header">
+                    WheelSpeedDeviationRatio_fast</h4>
+                    <h4 style="float:right; margin-right:50px, margin-left:50px" class="no-margin error-color error-glyph">ERROR</h4>
+                    <div class="hidden" id="WheelSpeedDeviationRatio_fast_avg_speed_testcase_div" style="clear:both">
+                        <h5>Scope: avg_speed</h5>
+                        <table class="table dualTable">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr>
+                                <td>Test Case Description</td>
+                                <td>Checking different combinations of wheels with deviating speeds</td>
+                            </tr>
+                            <tr>
+                                <td>Comment</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="stated-div error-border" id="WheelSpeedDeviationRatio_slow_avg_speed_state_div">
+                    <h4 class="error-color collapsed anchored float-left" onclick="toggleSection('WheelSpeedDeviationRatio_slow_avg_speed_testcase_div','WheelSpeedDeviationRatio_slow_avg_speed_testcase_header')" id="WheelSpeedDeviationRatio_slow_avg_speed_testcase_header">
+                    WheelSpeedDeviationRatio_slow</h4>
+                    <h4 style="float:right; margin-right:50px, margin-left:50px" class="no-margin error-color error-glyph">ERROR</h4>
+                    <div class="hidden" id="WheelSpeedDeviationRatio_slow_avg_speed_testcase_div" style="clear:both">
+                        <h5>Scope: avg_speed</h5>
+                        <table class="table dualTable">
+                            <tr>
+                                <th>Property</th>
+                                <th>Value</th>
+                            </tr>
+                            <tr>
+                                <td>Test Case Description</td>
+                                <td>Checking different combinations of wheels with deviating speeds</td>
+                            </tr>
+                            <tr>
+                                <td>Comment</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
   </div>
             </div>
         </div>
@@ -1723,7 +1885,7 @@ function toggleSection(div_id, clickable_id ) {
     <div class="ok-glyph ok-color">Covered
 </div>
 </td>
-    <td>        100%
+    <td>        0%
 </td>
   </tr>
   <tr id="21__req">
@@ -1735,46 +1897,34 @@ function toggleSection(div_id, clickable_id ) {
     <div class="ok-glyph ok-color">Covered
 </div>
 </td>
-    <td>        100%
+    <td>        0%
 </td>
   </tr>
   <tr id="21b_req">
     <td>        1.1 - Average Speed
 </td>
-    <td>The component shall calculate the average speed of the four wheels, including standstill and backwards movement (negative speeds)</td>
+    <td>The component shall calculate the average speed of the four wheels</td>
     <td>1</td>
 <td>
     <div class="ok-glyph ok-color">Covered
 </div>
 </td>
-    <td>        100%
+    <td>        0%
 </td>
   </tr>
   <tr id="21d_req">
     <td>        <i>2 - Deviating Wheel Speeds</i>
 </td>
     <td></td>
-    <td>3</td>
+    <td>2</td>
 <td>
     <div class="ok-glyph ok-color">Covered
 </div>
 </td>
-    <td>        100%
+    <td>        0%
 </td>
   </tr>
   <tr id="21f_req">
-    <td>        2.3 - Extreme Deviation Warning
-</td>
-    <td>The component shall issue a warning if any wheel speed deviates more than 25% from the average speed and the average speed is above 30km/h</td>
-    <td>1</td>
-<td>
-    <div class="ok-glyph ok-color">Covered
-</div>
-</td>
-    <td>        100%
-</td>
-  </tr>
-  <tr id="21h_req">
     <td>        2.2 - Wheel Speed Below Average
 </td>
     <td>The component shall indicate how much slower than the average speed the slowest wheel is (as negative percentage)</td>
@@ -1783,10 +1933,10 @@ function toggleSection(div_id, clickable_id ) {
     <div class="ok-glyph ok-color">Covered
 </div>
 </td>
-    <td>        100%
+    <td>        0%
 </td>
   </tr>
-  <tr id="21j_req">
+  <tr id="21h_req">
     <td>        2.1 - Wheel Speed Above Average
 </td>
     <td>The component shall indicate how much faster than the average speed the fastest wheel is (as positive percentage)</td>
@@ -1795,7 +1945,7 @@ function toggleSection(div_id, clickable_id ) {
     <div class="ok-glyph ok-color">Covered
 </div>
 </td>
-    <td>        100%
+    <td>        0%
 </td>
   </tr>
 </table>
