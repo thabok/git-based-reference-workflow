@@ -28,6 +28,7 @@ rbt_exec_payload = {
 exec_start_time = datetime.now()
 response = ep.post('scopes/test-execution-rbt', rbt_exec_payload, message="Running requirements-based tests")
 test_cases = ep.get('test-cases-rbt')
+
 # Dump JUnit XML report
 util.dump_testresults_junitxml(
     rbt_results=response,
@@ -37,6 +38,24 @@ util.dump_testresults_junitxml(
     project_name=project_name,
     output_file=os.path.join(work_dir, 'test_results.xml')
 )
+
+# Report test results to Polarion
+polarion_cfg =  {
+    'settings': [
+        { 'key': 'Host', 'value': 'http://polarion03.prom.local' },
+        { 'key': 'Port', 'value': '80' },
+        { 'key': 'Work Item Types', 'value': 'Test Case' },
+        { 'key': 'Linked Requirement Role', 'value': 'verifies' },
+        { 'key': 'Project ID', 'value': 'http://polarion03.prom.local/polarion/redirect/project/avgspeed' },
+        { 'key': 'username', 'value': os.environ['POLARION_USERNAME'] },
+        { 'key': 'pwd', 'value': os.environ['POLARION_PWD'] }
+    ],
+    'execConfigNames': ['SL MIL (Toplevel)'],
+    'requirementsSourceUid' : ep.get('requirements-sources')[0]['uid'],
+    'syncMode': 'EP',
+    'testStepsConsidered': True
+}
+ep.post('test-case-source-sync', polarion_cfg, message="Reporting test results to Polarion")
 
 # Create project report
 report = ep.post(f"scopes/{toplevel_scope_uid}/project-report", message="Creating test report")
