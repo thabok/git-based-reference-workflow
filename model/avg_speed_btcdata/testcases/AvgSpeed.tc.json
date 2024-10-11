@@ -4,7 +4,7 @@
     "name":"AvgSpeed",
     "scopePath":"",
     "architecture":"avg_speed",
-    "description":"Checks if the average speed is calculated correctly, including standstill and backwards movement (negative speeds)",
+    "description":"Checks if the average speed is calculated correctly",
     "length":"501",
     "draft":"false"
   },
@@ -12,7 +12,6 @@
     "steps":[ {
       "step":{
         "number":"0",
-        "comment":"standstill",
         "outputs":[ {
           "fAvgSpeed":"af((fWheelSpeedFL+fWheelSpeedFR+fWheelSpeedRL+fWheelSpeedRR) / 4, 501)"
         } ]
@@ -32,13 +31,7 @@
       }
     }, {
       "step":{
-        "number":"150",
-        "comment":"forwards movement"
-      }
-    }, {
-      "step":{
-        "number":"308",
-        "comment":"backwards movement"
+        "number":"308"
       }
     }, {
       "step":{
