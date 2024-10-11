@@ -10,7 +10,7 @@ project_name = os.path.basename(epp_file)[:-4]
 report_dir = os.path.abspath('reports')
 
 # BTC EmbeddedPlatform API object
-ep = EPRestApi(install_location='E:/Product/ep.exe', version='24.3p0') # adapted to use latest ep build
+ep = EPRestApi(version='24.3p0') # adapted to use latest ep build
 # Load a BTC EmbeddedPlatform profile (*.epx)
 ep.get(f"profiles/{epp_file}", message="Loading test project")
 ep.put('architectures?performUpdateCheck=true', message="Parsing model and updating test project")

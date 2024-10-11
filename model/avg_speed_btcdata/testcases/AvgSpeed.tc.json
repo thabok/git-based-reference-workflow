@@ -12,7 +12,6 @@
     "steps":[ {
       "step":{
         "number":"0",
-        "comment":"standstill",
         "outputs":[ {
           "fAvgSpeed":"af((fWheelSpeedFL+fWheelSpeedFR+fWheelSpeedRL+fWheelSpeedRR) / 4, 501)"
         } ]
@@ -32,13 +31,11 @@
       }
     }, {
       "step":{
-        "number":"150",
-        "comment":"forwards movement"
+        "number":"150"
       }
     }, {
       "step":{
-        "number":"308",
-        "comment":"backwards movement"
+        "number":"308"
       }
     }, {
       "step":{
