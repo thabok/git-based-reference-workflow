@@ -9,36 +9,6 @@
   "requirements":[ {
     "scopePath":"",
     "data":[ {
-      "identifier":"AVG-89",
-      "name":"1 - Core Functionality",
-      "description":"",
-      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-89",
-      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-89&revision=299677",
-      "parent":"",
-      "lastUpdated":"11 Oct 2024, 12:07",
-      "deleted":"false",
-      "additionalAttributes":[ ]
-    }, {
-      "identifier":"AVG-92",
-      "name":"1.2 - Overspeed Warning",
-      "description":"The component shall issue an overspeed warning if the speed is above 180km/h",
-      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-92",
-      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-92&revision=299677",
-      "parent":"AVG-89",
-      "lastUpdated":"11 Oct 2024, 12:07",
-      "deleted":"false",
-      "additionalAttributes":[ ]
-    }, {
-      "identifier":"AVG-91",
-      "name":"1.1 - Average Speed",
-      "description":"The component shall calculate the average speed of the four wheels",
-      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-91",
-      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-91&revision=299677",
-      "parent":"AVG-89",
-      "lastUpdated":"11 Oct 2024, 12:07",
-      "deleted":"false",
-      "additionalAttributes":[ ]
-    }, {
       "identifier":"AVG-90",
       "name":"2 - Deviating Wheel Speeds",
       "description":"",
@@ -65,6 +35,36 @@
       "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-93",
       "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-93&revision=299677",
       "parent":"AVG-90",
+      "lastUpdated":"11 Oct 2024, 12:07",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"AVG-89",
+      "name":"1 - Core Functionality",
+      "description":"",
+      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-89",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-89&revision=299677",
+      "parent":"",
+      "lastUpdated":"11 Oct 2024, 12:07",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"AVG-92",
+      "name":"1.2 - Overspeed Warning",
+      "description":"The component shall issue an overspeed warning if the speed is above 180km/h",
+      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-92",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-92&revision=299677",
+      "parent":"AVG-89",
+      "lastUpdated":"11 Oct 2024, 12:07",
+      "deleted":"false",
+      "additionalAttributes":[ ]
+    }, {
+      "identifier":"AVG-91",
+      "name":"1.1 - Average Speed",
+      "description":"The component shall calculate the average speed of the four wheels",
+      "externalUUID":"subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-91",
+      "url":"http://polarion03.prom.local/polarion/redirect/project/avgspeed/workitem?id=AVG-91&revision=299677",
+      "parent":"AVG-89",
       "lastUpdated":"11 Oct 2024, 12:07",
       "deleted":"false",
       "additionalAttributes":[ ]
