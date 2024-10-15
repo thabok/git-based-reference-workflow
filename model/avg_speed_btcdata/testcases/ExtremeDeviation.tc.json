@@ -1,0 +1,261 @@
+{
+  "version":"1.1",
+  "metaData":{
+    "name":"ExtremeDeviation",
+    "scopePath":"",
+    "architecture":"avg_speed",
+    "description":"extreme stuff",
+    "length":"31",
+    "draft":"false"
+  },
+  "vectorContent":{
+    "steps":[ {
+      "step":{
+        "number":"0",
+        "comment":"low speed",
+        "inputs":[ {
+          "fWheelSpeedFL":"3"
+        }, {
+          "fWheelSpeedFR":"1"
+        }, {
+          "fWheelSpeedRL":"1"
+        }, {
+          "fWheelSpeedRR":"1"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"1",
+        "comment":"no deviation",
+        "inputs":[ {
+          "fWheelSpeedFL":"50"
+        }, {
+          "fWheelSpeedFR":"50"
+        }, {
+          "fWheelSpeedRL":"50"
+        }, {
+          "fWheelSpeedRR":"50"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"2",
+        "inputs":[ {
+          "fWheelSpeedFL":"sg(Ramp, 29, Simulink, false, true, m=1, Starting value=51, End value=)"
+        } ],
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"3",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"4",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"5",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"6",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"7",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"8",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"9",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"10",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"11",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"12",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"13",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"14",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"15",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"16",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"17",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"18",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"19",
+        "comment":"acceptable deviation until here",
+        "outputs":[ {
+          "bExtremeDeviation":"0"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"20",
+        "comment":"extreme deviation (>25%) from here",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"21",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"22",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"23",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"24",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"25",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"26",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"27",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"28",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"29",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    }, {
+      "step":{
+        "number":"30",
+        "outputs":[ {
+          "bExtremeDeviation":"1"
+        } ]
+      }
+    } ]
+  },
+  "requirements":[ "subterra:data-service:objects:/default/avgspeed${WorkItem}AVG-95" ],
+  "interface":{
+    "inputs":[ "fWheelSpeedFL", "fWheelSpeedFR", "fWheelSpeedRL", "fWheelSpeedRR" ],
+    "outputs":[ "bExtremeDeviation", "bOverspeedWarning" ]
+  }
+}
