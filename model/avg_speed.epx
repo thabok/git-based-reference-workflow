@@ -21,7 +21,8 @@
       "Additional Model Information" : "file:/C:/Users/developer/AppData/Local/Temp/btc_temp_root/3294-5158-10c/AddModelInfo.xml",
       "Architecture" : "Simulink Top Level",
       "Parameters" : "ON",
-      "Visibility" : "GREY_BOX"
+      "Visibility" : "GREY_BOX",
+      "Conversion Target" : ""
     }
   },
   "Requirements Sources" : {
