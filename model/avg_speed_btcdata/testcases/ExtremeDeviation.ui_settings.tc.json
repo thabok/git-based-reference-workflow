@@ -1,0 +1,11 @@
+{
+  "version":"1.0",
+  "configuration":{
+    "signals":{
+      "outputs":[ {
+        "name":"bOverspeedWarning",
+        "visible":false
+      } ]
+    }
+  }
+}
